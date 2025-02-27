@@ -8,9 +8,20 @@ interface Props {
 }
 
 const names = [
-  "Inicio", "Revisión", "Aprobación", "Firma", "Entrega",
-  "Seguimiento", "Cierre", "Evaluación", "Reporte", "Feedback",
-  "Análisis", "Finalización", "Publicación", "Archivo"
+  "Inicio",
+  "Revisión",
+  "Aprobación",
+  "Firma",
+  "Entrega",
+  "Seguimiento",
+  "Cierre",
+  "Evaluación",
+  "Reporte",
+  "Feedback",
+  "Análisis",
+  "Finalización",
+  "Publicación",
+  "Archivo",
 ];
 export class Flow extends React.Component<Props> {
   handleSelect = (name: string) => {
@@ -27,15 +38,26 @@ export class Flow extends React.Component<Props> {
           return (
             <div className="circle-container" key={number}>
               {isRight && (
-                <span className="label right" onClick={() => this.handleSelect(name)}>
+                <span
+                  className="label right"
+                  onClick={() => this.handleSelect(name)}
+                >
                   {name}
                 </span>
               )}
-              <div className="circle" onClick={() => this.handleSelect(name)}>
-                {number}
+              <div className="circle">
+                <div
+                  className="circle-inside"
+                  onClick={() => this.handleSelect(name)}
+                >
+                  {number}
+                </div>
               </div>
               {!isRight && (
-                <span className="label left" onClick={() => this.handleSelect(name)}>
+                <span
+                  className="label left"
+                  onClick={() => this.handleSelect(name)}
+                >
                   {name}
                 </span>
               )}
@@ -47,10 +69,6 @@ export class Flow extends React.Component<Props> {
   }
 
   render(): React.ReactNode {
-    return (
-      <div className="container">
-        {this.renderSteps()}
-      </div>
-    );
+    return <div className="container">{this.renderSteps()}</div>;
   }
 }
