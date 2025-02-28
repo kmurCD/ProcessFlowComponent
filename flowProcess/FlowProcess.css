@@ -1,55 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 .container {
-  font-family: "Poppins", sans-serif;
-  margin: 5px;
-  width: 100%;
-  height: 1000px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  
   justify-content: center;
 }
 
 .steps {
+  width: 560px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center; /* Centra los elementos en la columna */
-  width: 100%;
 }
 
-.circle-container {
+.flow-container {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centra el círculo */
+  align-items: center; 
+  gap: 10px;
   position: relative;
-  width: 100%;
-  margin: 10px 0;
+  
 }
+.circle-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 
-.circle {
+  
+}
+.circle-container {
   width: 40px;
   height: 40px;
-  background-color: white;
   border-radius: 50%;
-  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #115EA3; /* Color del círculo */
+  color: rgb(255, 255, 255);
+}
+.circle-inside{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  position: relative;
-  z-index: 2;
+
 }
 
-.label {
-  position: absolute;
-  color: red;
-  font-weight: bold;
+.progress-container{
+  width: 5px; /* Grosor de la línea */
+  height: 30px;
+  background-color: #115EA3; /* Color de la línea */
 }
 
-.label.right {
-  left: 60px; /* Ajusta según sea necesario */
+.label-container{
+  display: flex;
+  align-items: start;
+  min-width: 100px;
+  height: 100%;
+}
+.text-container{
+  padding: 5px;
+  font-size: 14;
+  list-style: none; 
 }
 
-.label.left {
-  right: 60px; /* Ajusta según sea necesario */
-}
