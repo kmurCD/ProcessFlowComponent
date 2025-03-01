@@ -18,7 +18,8 @@
       -->
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="Phase" display-name-key="Phase" description-key="Phase of the oportunity" of-type="OptionSet" usage="bound" required="true" />
+    <property name="ControlPhase" display-name-key="Control Phase" description-key="Control Phase of the oportunity" of-type="Whole.None" usage="output" required="true" />
     <!--
       Property node's of-type attribute can be of-type-group attribute.
       Example:

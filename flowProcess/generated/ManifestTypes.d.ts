@@ -4,8 +4,9 @@
 
 // Define IInputs and IOutputs Type. They should match with ControlManifest.
 export interface IInputs {
-    sampleProperty: ComponentFramework.PropertyTypes.StringProperty;
+    Phase: ComponentFramework.PropertyTypes.OptionSetProperty;
 }
 export interface IOutputs {
-    sampleProperty?: string;
+    Phase?: number;
+    ControlPhase?: number;
 }

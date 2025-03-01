@@ -1,9 +1,10 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { Flow,} from "./FlowProcess";
+import FlowProcess from "./FlowProcess";
 import * as React from "react";
 
-export class flowProcess implements ComponentFramework.ReactControl<IInputs, IOutputs> {
+export class flowProcess implements ComponentFramework.StandardControl<IInputs, IOutputs> {
     private notifyOutputChanged: () => void;
+    private statusValue: number = 0;
 
     /**
      * Empty constructor.
@@ -24,7 +25,12 @@ export class flowProcess implements ComponentFramework.ReactControl<IInputs, IOu
         notifyOutputChanged: () => void,
         state: ComponentFramework.Dictionary
     ): void {
+
+
+
         this.notifyOutputChanged = notifyOutputChanged;
+        this.updateView(context);
+
     }
 
     /**
@@ -33,18 +39,28 @@ export class flowProcess implements ComponentFramework.ReactControl<IInputs, IOu
      * @returns ReactElement root react element for the control
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
-        return React.createElement(Flow);
-       
+        const newStatusValue = context.parameters.Phase.raw || 0;
+    
+        // Solo actualizar si el valor realmente cambió
+        if (this.statusValue !== newStatusValue) {
+            this.statusValue = newStatusValue;
+            console.log("estatus " + this.statusValue);
+            this.notifyOutputChanged();
+        }
+        return React.createElement(FlowProcess, { phase: this.statusValue });
        
     }
     
+
 
     /**
      * It is called by the framework prior to a control receiving new data.
      * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
      */
     public getOutputs(): IOutputs {
-        return { };
+        return { 
+            ControlPhase: this.statusValue         
+        };
     }
 
     /**

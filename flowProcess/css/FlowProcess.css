@@ -1,13 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 .container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+.container {
   display: flex;
   justify-content: center;
+  position: relative;
 }
-
+.estado {
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+}
 .steps {
-  width: 560px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -17,18 +24,15 @@
 
 .flow-container {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
   position: relative;
-  
 }
 .circle-progress-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-
-  
 }
 .circle-container {
   width: 40px;
@@ -37,31 +41,54 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  background-color: #115EA3; /* Color del círculo */
+}
+/*menor que*/
+.circle-container-1 {
+  border: 1px solid black;
+  background-color: #ffffff; /* Color del círculo */
+  color: rgb(0, 0, 0);
+}
+/*mayor que*/
+.circle-container-2 {
+  background-color: #116da3; /* Color del círculo */
   color: rgb(255, 255, 255);
 }
-.circle-inside{
+.circle-inside {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-.progress-container{
+.circle-select {
+  color: rgb(0, 0, 0);
+  background-color: rgb(124, 124, 124) !important;
+}
+
+.circle-active {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  color: rgb(255, 255, 255);
+  background-color: red;
+}
+
+.progress-container {
   width: 5px; /* Grosor de la línea */
   height: 30px;
-  background-color: #115EA3; /* Color de la línea */
+  background-color: #115ea3; /* Color de la línea */
 }
 
-.label-container{
+.label-container {
   display: flex;
   align-items: start;
   min-width: 100px;
   height: 100%;
 }
-.text-container{
+.text-container {
   padding: 5px;
   font-size: 14;
-  list-style: none; 
+  list-style: none;
 }
-
