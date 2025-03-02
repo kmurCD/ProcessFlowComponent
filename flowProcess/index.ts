@@ -6,8 +6,8 @@ export class flowProcess
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;
-  private statusValue = 0;
-  private selectedStepNumer: number;
+  private phaseValue = 0;
+  private phaseValueSelect: number;
 
   constructor() {
     // Constructor inicializado
@@ -19,25 +19,29 @@ export class flowProcess
   ): void {
     this.notifyOutputChanged = notifyOutputChanged;
     this.updateView(context);
-    this.selectedStepNumer = 0;
+    this.phaseValueSelect = 0;
   }
 
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
-    const newStatusValue = context.parameters.Phase.raw ?? 1;
+    const newPhaseValue = context.parameters.Phase.raw ?? 1;
 
-    // Solo actualizar si el valor realmente cambió
-    if (this.statusValue !== newStatusValue) {
-      this.statusValue = newStatusValue;
-      console.log("Phase value:", context.parameters.Phase.raw);
+    if (this.phaseValue !== newPhaseValue) {
+      this.phaseValue = newPhaseValue;
+      console.log("Phase value: ", context.parameters.Phase.raw);
       this.notifyOutputChanged();
     }
+
     return React.createElement(FlowProcess, {
-      phase: this.statusValue,
-      onStepSelect: (stepNumber: number) => {
-        this.selectedStepNumer = stepNumber;
-        console.log("selecionado" +this.selectedStepNumer)
+      phase: this.phaseValue,
+
+      //* Actualizar el valor de la fase seleccionada 
+      onPhaseValueSelect: (value: number) => {
+        this.phaseValueSelect = value;
+    
+        console.log("Phase Select: " +this.phaseValueSelect)
+
         this.notifyOutputChanged();
       },
     });
@@ -46,7 +50,7 @@ export class flowProcess
  
   public getOutputs(): IOutputs {
     return {
-      ControlPhase: this.selectedStepNumer
+      ControlPhase: this.phaseValueSelect
     };
   }
 
