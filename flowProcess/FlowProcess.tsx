@@ -6,24 +6,30 @@ import { useState } from "react";
 
 interface FlowProcessProps {
     phase: number;
+    onStepSelect: (stepNumber: number) => void;
 }
 
-const FlowProcess: React.FC<FlowProcessProps> =  ({ phase }:{ phase: number })=> {
-  const [selectedStep, setSelectedStep] = useState<string>("");
+const FlowProcess: React.FC<FlowProcessProps> =  ({ phase,onStepSelect })=> {
 
-  const handleStepSelect = (value: string) => {
+
+  const [selectedStep, setSelectedStep] = useState<string>("");
+  
+
+  
+  const handleStepSelect = (value: string, number: number) => {
     setSelectedStep(value);
-    console.log(`Paso seleccionado: ${value}`);
+    onStepSelect(number);
+    console.log(`Paso seleccionado: ${number}`);
   };
 
   return (
-    <div className="container">
+    <div className="container-flowProcess">
+       <p className="status">
+        Estado Actual: {selectedStep || "Ningún paso seleccionado"}
+      </p>
       <div className="container-section">
       <Flow onSelect={handleStepSelect} selectedStep={selectedStep} phase={phase} />
       </div>
-      <p className="estado">
-        Estado Actual: {selectedStep || "Ningún paso seleccionado"}
-      </p>
     </div>
   );
 };
