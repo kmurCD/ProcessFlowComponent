@@ -1,8 +1,8 @@
 import * as React from "react";
 import Flow from "./Flow";
 import "./css/FlowProcess.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
+
 
 interface FlowProcessProps {
   phase: number;
@@ -42,12 +42,12 @@ const FlowProcess: React.FC<FlowProcessProps> = ({
 
   return (
     <div className="container-flowProcess">
-      <p className="status">
+      <div className="status">
         <span style={{ fontWeight: "bold", color: "black", fontSize: "15" }}>
           Estado actual:
         </span>
-        <span style={{ color: "red", fontSize: "15" }}> {names[phase]}</span>
-      </p>
+        <span style={{ color: "red", fontSize: "15" }}> {names[phase-1]}</span>
+      </div>
 
       <div className="container-section">
         <Flow

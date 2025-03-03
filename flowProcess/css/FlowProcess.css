@@ -1,113 +1,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+/** Contenedor principal */
 .container-flowProcess {
-  width: 560px;
+  width: 100%;
+  height: 100%;
+  padding: 0.5 rem;
+  overflow: hidden;
+  height: auto;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/** Sección principal */
 .container-section {
   min-width: 70%;
+  max-width: 100%;
+  height: 100%;
 }
+
+/** Estado */
 .status {
   width: 30%;
-  padding: 10px;
+  height: 100%;
+  font-size: 14;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
 }
+
+/** Pasos */
 .steps {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  padding: 10px;
 }
-/** Contenedor general*/
+
+/** Contenedor general */
 .flow-container {
   width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-/** Contenedor padre de los circulos y barra vertical */
+/*! CIRCULO
+/** Contenedor de los círculos y barra vertical */
 .circle-progress-container {
-  width: 20%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/** Contenedor general de circulos*/
+/** Contenedor de cada círculo */
 .circle-container {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem; /* 40px en rem */
+  height: 2.5rem; /* 40px en rem */
+  min-width: 2rem; /* 32px en rem */
+  min-height: 2rem; /* 32px en rem */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-/** Contenedor mayor que el estado actual */
+/** Estado actual */
 .circle-container-1 {
-  border: 1px solid black;
+  border: 0.05rem solid rgb(109, 109, 109); 
   background-color: #ffffff;
   color: rgb(0, 0, 0);
 }
-/** Contenedor menor que el estado actual */
+/** Estado menor que el actual */
 .circle-container-2 {
+  border: none;
   background-color: #116da3;
   color: rgb(255, 255, 255);
 }
-/** Contenido del circulo */
-.circle-inside {
+/** Contenido dentro del círculo */
+.circle-content {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/** Circulo seleccionado */
+/** Círculo seleccionado */
 .circle-select {
   color: rgb(0, 0, 0);
   background-color: rgb(124, 124, 124) !important;
 }
-/** Circulo activo por estado */
+/** Círculo activo */
 .circle-active {
+  border: none;
   color: rgb(255, 255, 255);
   background-color: red;
 }
+
+/*! BARRA DE PROGRESO
 /** Barra de progreso */
-.progress-container {
-  width: 5px;
-  height: 30px;
+.progress-before {
+  width: 0.2rem; /* 5px en rem */
+  height: 1.5rem; /* 30px en rem */
   background-color: #115ea3;
 }
-/** Contenedor padre texto izquiero del circulo */
-.label-container {
-  display: flex;
-  justify-content: end;
-  width: 80%;
-  height: 100%;
-}
-/** Contenedor texto izquiero*/
-.text-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  list-style: none;
-  white-space: nowrap;
-}
-/** Label contenido*/
-.label-content {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 100%;
-  height: 50%;
-  text-align: end;
+.progress-after {
+  width: 0.2rem; /* 5px en rem */
+  height: 1.5rem;
+  background-color: gray;
 }
 
-/** Espaciador*/
-.label-space {
-  height: 50%;
+/*! TEXTO
+/** Contenedor del texto */
+.text-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
   width: 100%;
+  font-size: 14px;
+  list-style: none;
 }
+.text-content{
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+/** Espaciador */
+.span-space {
+  display: flex;
+  width: 100%;
+  min-height: 50%;
+}
+
