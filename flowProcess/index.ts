@@ -10,6 +10,7 @@ export class FlowProcess
   private phaseValueSelect: number;
   private nexPhaseValue: number;
 
+
   constructor() {
     // Constructor inicializado
 }
@@ -62,6 +63,8 @@ export class FlowProcess
     return {
       ControlPhase: this.phaseValueSelect,
       Phase: this.nexPhaseValue > 0 ? this.nexPhaseValue : this.phaseValue, 
+
+
     };
   }
 
