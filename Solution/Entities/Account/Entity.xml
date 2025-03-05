@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Cuenta" OriginalName="">Account</Name>
+  <EntityInfo>
+    <entity Name="Account">
+      <LocalizedNames>
+        <LocalizedName description="Cuenta" languagecode="3082" />
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Cuentas" languagecode="3082" />
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Empresa que representa a un cliente o cliente potencial. La empresa a la que se factura en transacciones comerciales." languagecode="3082" />
+      </Descriptions>
+      <attributes>
+        <attribute PhysicalName="AccountClassificationCode">
+          <Type>picklist</Type>
+          <Name>accountclassificationcode</Name>
+          <LogicalName>accountclassificationcode</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>5.0.0.0</IntroducedVersion>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="account_accountclassificationcode">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>5.0.0.0</IntroducedVersion>
+            <displaynames>
+              <displayname description="Clasificación" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="Lista desplegable para clasificar una cuenta." languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="1" IsHidden="0">
+                <labels>
+                  <label description="Bronce" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="2" IsHidden="0">
+                <labels>
+                  <label description="Plata" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="3" IsHidden="0">
+                <labels>
+                  <label description="Oro" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="4" IsHidden="0">
+                <labels>
+                  <label description="Platino" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Clasificación" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Seleccione un código de clasificación para indicar el valor potencial de la cuenta del cliente basado en las proyecciones de rentabilidad de la inversión, nivel de cooperación, duración de ciclo de ventas u otros criterios." languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="centella_Origen">
+          <Type>picklist</Type>
+          <Name>centella_origen</Name>
+          <LogicalName>centella_origen</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="centella_account_centella_origen">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="Origen" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="1" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="Origen1" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Origen" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="centella_RazonSocial">
+          <Type>nvarchar</Type>
+          <Name>centella_razonsocial</Name>
+          <LogicalName>centella_razonsocial</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>255</MaxLength>
+          <Length>510</Length>
+          <displaynames>
+            <displayname description="Razon Social" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="centella_RUC">
+          <Type>nvarchar</Type>
+          <Name>centella_ruc</Name>
+          <LogicalName>centella_ruc</LogicalName>
+          <RequiredLevel>required</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>text</Format>
+          <MaxLength>11</MaxLength>
+          <Length>22</Length>
+          <displaynames>
+            <displayname description="RUC" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="centella_TipodeCuenta">
+          <Type>picklist</Type>
+          <Name>centella_tipodecuenta</Name>
+          <LogicalName>centella_tipodecuenta</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>1</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="centella_account_centella_tipodecuenta">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="Tipo de Cuenta" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="1" ExternalValue="" Color="#DBDBDB" IsHidden="0">
+                <labels>
+                  <label description="1. Prospecto Inactivo" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="2" ExternalValue="" Color="#666666" IsHidden="0">
+                <labels>
+                  <label description="2. Prospecto Activo" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="3" ExternalValue="" Color="#67C480" IsHidden="0">
+                <labels>
+                  <label description="3. Lead" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="4" ExternalValue="" Color="#5CB3FD" IsHidden="0">
+                <labels>
+                  <label description="4. Cliente Activo" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="5" ExternalValue="" Color="#FD8989" IsHidden="0">
+                <labels>
+                  <label description="5. Cliente Inactivo" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="6" ExternalValue="" Color="#EB4D4D" IsHidden="0">
+                <labels>
+                  <label description="6. Prospecto Descartado" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Tipo de Cuenta" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="IndustryCode">
+          <Type>picklist</Type>
+          <Name>industrycode</Name>
+          <LogicalName>industrycode</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>5.0.0.0</IntroducedVersion>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>1</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="account_industrycode">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>5.0.0.0</IntroducedVersion>
+            <displaynames>
+              <displayname description="Sector" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="Tipo de sector con el que está asociada la cuenta." languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="34" IsHidden="0">
+                <labels>
+                  <label description="Agricultura, caza, silvicultura y pesca" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="35" IsHidden="0">
+                <labels>
+                  <label description="Energía y agua" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="36" IsHidden="0">
+                <labels>
+                  <label description="Extracción y transformación de minerales no energéticos y productos derivados; industria química" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="37" IsHidden="0">
+                <labels>
+                  <label description="Industrias de transformación de los metales, mecánica de precisión" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="38" IsHidden="0">
+                <labels>
+                  <label description="Otras industrias manufactureras" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="39" IsHidden="0">
+                <labels>
+                  <label description="Construcción e ingeniería civil" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="40" IsHidden="0">
+                <labels>
+                  <label description="Comercio, restaurantes y hostelería, reparaciones" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="41" IsHidden="0">
+                <labels>
+                  <label description="Transportes y comunicaciones" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="42" IsHidden="0">
+                <labels>
+                  <label description="Instituciones financieras, seguros, servicios prestados a las empresas, alquileres" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="43" IsHidden="0">
+                <labels>
+                  <label description="Otros servicios" languagecode="3082" />
+                </labels>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Industria" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Seleccione el sector principal de la cuenta para su uso en segmentación de mercados y análisis demográficos." languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="OwnershipCode">
+          <Type>picklist</Type>
+          <Name>ownershipcode</Name>
+          <LogicalName>ownershipcode</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>0</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>5.0.0.0</IntroducedVersion>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>0</IsSortableEnabled>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="account_ownershipcode">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>5.0.0.0</IntroducedVersion>
+            <displaynames>
+              <displayname description="Propiedad" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="Tipo de propiedad de la compañía (por ejemplo, pública o privada)." languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="1" IsHidden="0">
+                <labels>
+                  <label description="Pública" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="2" IsHidden="0">
+                <labels>
+                  <label description="Privada" languagecode="3082" />
+                </labels>
+              </option>
+              <option value="3" IsHidden="0">
+                <labels>
+                  <label description="Otros" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Propiedad" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="Seleccione la estructura de propiedad de la cuenta, por ejemplo, pública o privada." languagecode="3082" />
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>accounts</EntitySetName>
+      <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
+      <IsBusinessProcessEnabled>1</IsBusinessProcessEnabled>
+      <IsRequiredOffline>0</IsRequiredOffline>
+      <IsInteractionCentricEnabled>1</IsInteractionCentricEnabled>
+      <IsCollaboration>0</IsCollaboration>
+      <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+      <IsConnectionsEnabled>1</IsConnectionsEnabled>
+      <EntityColor>#794300</EntityColor>
+      <IsDocumentManagementEnabled>1</IsDocumentManagementEnabled>
+      <AutoCreateAccessTeams>0</AutoCreateAccessTeams>
+      <IsOneNoteIntegrationEnabled>1</IsOneNoteIntegrationEnabled>
+      <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+      <IsSLAEnabled>0</IsSLAEnabled>
+      <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+      <IsBPFEntity>0</IsBPFEntity>
+      <OwnershipTypeMask>UserOwned</OwnershipTypeMask>
+      <EntityMask>ActivityPointer</EntityMask>
+      <IsAuditEnabled>0</IsAuditEnabled>
+      <IsRetrieveAuditEnabled>0</IsRetrieveAuditEnabled>
+      <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <ActivityTypeMask></ActivityTypeMask>
+      <IsActivityParty>1</IsActivityParty>
+      <IsReplicated>1</IsReplicated>
+      <IsReplicationUserFiltered>1</IsReplicationUserFiltered>
+      <IsMailMergeEnabled>1</IsMailMergeEnabled>
+      <IsVisibleInMobile>1</IsVisibleInMobile>
+      <IsVisibleInMobileClient>1</IsVisibleInMobileClient>
+      <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+      <IsOfflineInMobileClient>1</IsOfflineInMobileClient>
+      <DaysSinceRecordLastModified>0</DaysSinceRecordLastModified>
+      <MobileOfflineFilters>
+		&lt;fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false"&gt;
+			&lt;entity name="account"&gt;
+				&lt;filter type="and"&gt;
+					&lt;condition attribute="modifiedon" operator="last-x-days" value="10"/&gt;
+				&lt;/filter&gt;
+			&lt;/entity&gt;
+		&lt;/fetch&gt;
+	</MobileOfflineFilters>
+      <IsMapiGridEnabled>1</IsMapiGridEnabled>
+      <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+      <IsQuickCreateEnabled>1</IsQuickCreateEnabled>
+      <SyncToExternalSearchIndex>1</SyncToExternalSearchIndex>
+      <IntroducedVersion>5.0.0.0</IntroducedVersion>
+      <EnforceStateTransitions>0</EnforceStateTransitions>
+      <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+      <ChangeTrackingEnabled>1</ChangeTrackingEnabled>
+      <IsEnabledForExternalChannels>1</IsEnabledForExternalChannels>
+      <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+      <IsSolutionAware>0</IsSolutionAware>
+      <HasRelatedNotes>True</HasRelatedNotes>
+      <HasRelatedActivities>True</HasRelatedActivities>
+    </entity>
+  </EntityInfo>
+  <FormXml />
+  <RibbonDiffXml />
+</Entity>

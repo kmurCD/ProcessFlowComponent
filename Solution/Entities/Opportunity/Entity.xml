@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Oportunidad" OriginalName="Oportunidad">Opportunity</Name>
+  <EntityInfo>
+    <entity Name="Opportunity">
+      <LocalizedNames>
+        <LocalizedName description="Oportunidad" languagecode="3082" />
+      </LocalizedNames>
+      <LocalizedCollectionNames>
+        <LocalizedCollectionName description="Oportunidades" languagecode="3082" />
+      </LocalizedCollectionNames>
+      <Descriptions>
+        <Description description="Posible evento generador de ingresos o venta a una cuenta de la que se debe mantener un seguimiento durante un proceso de venta hasta realizarla." languagecode="3082" />
+      </Descriptions>
+      <attributes>
+        <attribute PhysicalName="centella_ControlPhase">
+          <Type>int</Type>
+          <Name>centella_controlphase</Name>
+          <LogicalName>centella_controlphase</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>disabled</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>1</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <Format>none</Format>
+          <MinValue>-2147483648</MinValue>
+          <MaxValue>2147483647</MaxValue>
+          <displaynames>
+            <displayname description="ControlPhase" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+        <attribute PhysicalName="centella_Phase">
+          <Type>picklist</Type>
+          <Name>centella_phase</Name>
+          <LogicalName>centella_phase</LogicalName>
+          <RequiredLevel>none</RequiredLevel>
+          <DisplayMask>ValidForAdvancedFind|ValidForForm|ValidForGrid</DisplayMask>
+          <ImeMode>auto</ImeMode>
+          <ValidForUpdateApi>1</ValidForUpdateApi>
+          <ValidForReadApi>1</ValidForReadApi>
+          <ValidForCreateApi>1</ValidForCreateApi>
+          <IsCustomField>1</IsCustomField>
+          <IsAuditEnabled>1</IsAuditEnabled>
+          <IsSecured>0</IsSecured>
+          <IntroducedVersion>1.0.0.0</IntroducedVersion>
+          <IsCustomizable>1</IsCustomizable>
+          <IsRenameable>1</IsRenameable>
+          <CanModifySearchSettings>1</CanModifySearchSettings>
+          <CanModifyRequirementLevelSettings>1</CanModifyRequirementLevelSettings>
+          <CanModifyAdditionalSettings>1</CanModifyAdditionalSettings>
+          <SourceType>0</SourceType>
+          <IsGlobalFilterEnabled>0</IsGlobalFilterEnabled>
+          <IsSortableEnabled>1</IsSortableEnabled>
+          <CanModifyGlobalFilterSettings>1</CanModifyGlobalFilterSettings>
+          <CanModifyIsSortableSettings>1</CanModifyIsSortableSettings>
+          <IsDataSourceSecret>0</IsDataSourceSecret>
+          <AutoNumberFormat></AutoNumberFormat>
+          <IsSearchable>0</IsSearchable>
+          <IsFilterable>0</IsFilterable>
+          <IsRetrievable>0</IsRetrievable>
+          <IsLocalizable>0</IsLocalizable>
+          <AppDefaultValue>-1</AppDefaultValue>
+          <optionset Name="centella_opportunity_centella_phase">
+            <OptionSetType>picklist</OptionSetType>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <IsCustomizable>1</IsCustomizable>
+            <ExternalTypeName></ExternalTypeName>
+            <displaynames>
+              <displayname description="Fase Oportunidad" languagecode="3082" />
+            </displaynames>
+            <Descriptions>
+              <Description description="" languagecode="3082" />
+            </Descriptions>
+            <options>
+              <option value="1" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="1.  Prospección" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="2" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="2.  Calificación de Oportunidad" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="3" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="3.  Levantamiento de requerimientos" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="4" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="4.  Elaboración de la Propuesta Técnica" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="5" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="5.  Entrega propuesta Técnica" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="6" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="6.  Presentación ejecutiva solución" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="7" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="7.  Aprobación propuesta Técnica" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="8" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="8.  Elaboración de la Propuesta Económica" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="9" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="9.  Entrega Propuesta Económica" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="10" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="10.  Negociación" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="11" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="11.  Formalización" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="12" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="12.  Cierre Ganada" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="13" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="13.  Ejecución" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+              <option value="14" ExternalValue="" IsHidden="0">
+                <labels>
+                  <label description="14. Entregado" languagecode="3082" />
+                </labels>
+                <Descriptions>
+                  <Description description="" languagecode="3082" />
+                </Descriptions>
+              </option>
+            </options>
+          </optionset>
+          <displaynames>
+            <displayname description="Fase Oportunidad" languagecode="3082" />
+          </displaynames>
+          <Descriptions>
+            <Description description="" languagecode="3082" />
+          </Descriptions>
+        </attribute>
+      </attributes>
+      <EntitySetName>opportunities</EntitySetName>
+      <IsDuplicateCheckSupported>1</IsDuplicateCheckSupported>
+      <IsBusinessProcessEnabled>1</IsBusinessProcessEnabled>
+      <IsRequiredOffline>0</IsRequiredOffline>
+      <IsInteractionCentricEnabled>0</IsInteractionCentricEnabled>
+      <IsCollaboration>0</IsCollaboration>
+      <AutoRouteToOwnerQueue>0</AutoRouteToOwnerQueue>
+      <IsConnectionsEnabled>1</IsConnectionsEnabled>
+      <EntityColor>#3E7239</EntityColor>
+      <IsDocumentManagementEnabled>1</IsDocumentManagementEnabled>
+      <AutoCreateAccessTeams>1</AutoCreateAccessTeams>
+      <IsOneNoteIntegrationEnabled>1</IsOneNoteIntegrationEnabled>
+      <IsKnowledgeManagementEnabled>0</IsKnowledgeManagementEnabled>
+      <IsSLAEnabled>0</IsSLAEnabled>
+      <IsDocumentRecommendationsEnabled>0</IsDocumentRecommendationsEnabled>
+      <IsBPFEntity>0</IsBPFEntity>
+      <OwnershipTypeMask>UserOwned</OwnershipTypeMask>
+      <EntityMask>ActivityPointer</EntityMask>
+      <IsAuditEnabled>1</IsAuditEnabled>
+      <IsRetrieveAuditEnabled>1</IsRetrieveAuditEnabled>
+      <IsRetrieveMultipleAuditEnabled>0</IsRetrieveMultipleAuditEnabled>
+      <IsActivity>0</IsActivity>
+      <ActivityTypeMask></ActivityTypeMask>
+      <IsActivityParty>1</IsActivityParty>
+      <IsReplicated>1</IsReplicated>
+      <IsReplicationUserFiltered>1</IsReplicationUserFiltered>
+      <IsMailMergeEnabled>1</IsMailMergeEnabled>
+      <IsVisibleInMobile>1</IsVisibleInMobile>
+      <IsVisibleInMobileClient>1</IsVisibleInMobileClient>
+      <IsReadOnlyInMobileClient>0</IsReadOnlyInMobileClient>
+      <IsOfflineInMobileClient>1</IsOfflineInMobileClient>
+      <DaysSinceRecordLastModified>10</DaysSinceRecordLastModified>
+      <MobileOfflineFilters>
+		&lt;fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false"&gt;
+			&lt;entity name="opportunity"&gt;
+				&lt;filter type="and"&gt;
+					&lt;condition attribute="modifiedon" operator="last-x-days" value="10"/&gt;
+				&lt;/filter&gt;
+			&lt;/entity&gt;
+		&lt;/fetch&gt;
+	</MobileOfflineFilters>
+      <IsMapiGridEnabled>1</IsMapiGridEnabled>
+      <IsReadingPaneEnabled>1</IsReadingPaneEnabled>
+      <IsQuickCreateEnabled>1</IsQuickCreateEnabled>
+      <SyncToExternalSearchIndex>1</SyncToExternalSearchIndex>
+      <IntroducedVersion>5.0.0.0</IntroducedVersion>
+      <EnforceStateTransitions>0</EnforceStateTransitions>
+      <EntityHelpUrlEnabled>0</EntityHelpUrlEnabled>
+      <EntityHelpUrl></EntityHelpUrl>
+      <ChangeTrackingEnabled>1</ChangeTrackingEnabled>
+      <IsEnabledForExternalChannels>0</IsEnabledForExternalChannels>
+      <IsMSTeamsIntegrationEnabled>0</IsMSTeamsIntegrationEnabled>
+      <IsSolutionAware>0</IsSolutionAware>
+      <HasRelatedNotes>True</HasRelatedNotes>
+      <HasRelatedActivities>True</HasRelatedActivities>
+    </entity>
+  </EntityInfo>
+  <FormXml />
+  <RibbonDiffXml />
+  <CustomControlDefaultConfigs>
+    <CustomControlDefaultConfig>
+      <ControlDescriptionXML>
+        <controlDescriptions>
+          <controlDescription>
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+              <parameters />
+            </customControl>
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="1">
+              <parameters />
+            </customControl>
+            <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="2">
+              <parameters />
+            </customControl>
+            <customControl name="MscrmControls.Sales.DealManagerWorkspace.DealManagerWorkspace" formFactor="-1">
+              <parameters>
+                <data-set name="Grid" />
+                <EnableEditing static="true" type="Enum">yes</EnableEditing>
+                <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+                <EnableRangeSelection static="true" type="Enum">yes</EnableRangeSelection>
+                <EnableJumpBar static="true" type="Enum">no</EnableJumpBar>
+                <EnablePagination static="true" type="Enum">no</EnablePagination>
+                <EnableStatusColumn static="true" type="Enum">yes</EnableStatusColumn>
+                <EnableDropdownColor static="true" type="Enum">no</EnableDropdownColor>
+                <EnableTypeIcons static="true" type="Enum">no</EnableTypeIcons>
+                <NavigationTypesAllowed static="true" type="Enum">all</NavigationTypesAllowed>
+                <ReflowBehavior static="true" type="Enum">Reflow</ReflowBehavior>
+                <EnableDashlet static="true" type="Enum">yes</EnableDashlet>
+                <EnableCharts static="true" type="Enum">yes</EnableCharts>
+                <EnableGrid static="true" type="Enum">yes</EnableGrid>
+                <EnableChartClickInteractions static="true" type="Enum">yes</EnableChartClickInteractions>
+                <EnableGrouping static="true" type="Enum">no</EnableGrouping>
+                <EnableAggregation static="true" type="Enum">no</EnableAggregation>
+              </parameters>
+            </customControl>
+          </controlDescription>
+        </controlDescriptions>
+      </ControlDescriptionXML>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    </CustomControlDefaultConfig>
+  </CustomControlDefaultConfigs>
+</Entity>

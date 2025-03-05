@@ -1,0 +1,11 @@
+function showAccountAlert(executionContext) {
+    var formContext = executionContext.getFormContext(); // Obtener el contexto del formulario
+
+    // Obtener el valor del campo "Nombre de cuenta"
+    var accountName = formContext.getAttribute("name").getValue();
+
+    // Verificar si el campo tiene un valor antes de mostrar la alerta
+    if (accountName) {
+        alert("Bienvenido, " + accountName);
+    }
+}

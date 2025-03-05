@@ -1,0 +1,20 @@
+2025-03-05 01:51:31.290 - Info	
+Packing C:\PFC\TransligraPCF\Solution\obj\Debug\Metadata to bin\Debug\Solution.zip
+
+2025-03-05 01:51:31.302 - Info	Processing Component: Entities
+2025-03-05 01:51:31.306 - Info	Processing Component: Roles
+2025-03-05 01:51:31.306 - Info	Processing Component: Workflows
+2025-03-05 01:51:31.306 - Info	Processing Component: FieldSecurityProfiles
+2025-03-05 01:51:31.306 - Info	Processing Component: Templates
+2025-03-05 01:51:31.306 - Info	Processing Component: EntityMaps
+2025-03-05 01:51:31.306 - Info	Processing Component: EntityRelationships
+2025-03-05 01:51:31.306 - Info	Processing Component: OrganizationSettings
+2025-03-05 01:51:31.306 - Info	Processing Component: optionsets
+2025-03-05 01:51:31.306 - Info	Processing Component: CustomControls
+2025-03-05 01:51:31.306 - Info	 - centella.FlowProcess
+2025-03-05 01:51:31.322 - Info	Processing Component: SolutionPluginAssemblies
+2025-03-05 01:51:31.322 - Info	Processing Component: EntityDataProviders
+2025-03-05 01:51:31.322 - Info	Processing Sharded Component Files
+2025-03-05 01:51:31.351 - Info	
+Unmanaged Pack complete.
+

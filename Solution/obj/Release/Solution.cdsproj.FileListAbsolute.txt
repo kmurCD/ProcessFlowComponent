@@ -1,0 +1,4 @@
+C:\PFC\TransligraPCF\Solution\obj\Release\Solution.cdsproj.AssemblyReference.cache
+C:\PFC\TransligraPCF\Solution\obj\Release\Solution.cdsproj.CoreCompileInputs.cache
+C:\PFC\Transligra\PCF_FlowProcess\Solution\obj\Release\Solution.cdsproj.AssemblyReference.cache
+C:\PFC\Transligra\PCF_FlowProcess\Solution\obj\Release\Solution.cdsproj.CoreCompileInputs.cache

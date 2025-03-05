@@ -1,0 +1,21 @@
+function cambiarColorEstado() {
+    let elementos = document.querySelectorAll("li[data-selected-stage='true'] div[title] div div");
+    elementos.forEach(elemento => {
+        elemento.style.color = 'red';
+    });
+console.log(document.querySelectorAll("li[data-selected-stage='true'] div[title] div div"));
+      console.log(document.querySelectorAll("li[data-selected-stage='false'] div[title] div div"));
+}
+
+function checkBPFVisibility(executionContext) {
+    var formContext = executionContext.getFormContext();
+
+    if (formContext.ui.process) {
+formContext.ui.process.setVisible(false);
+        console.log("BPF encontrado.");
+        return true;
+    } else {
+        console.warn("No hay un BPF en este formulario.");
+        return false;
+    }
+}

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>SalesHubSitemap</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area IntroducedVersion="7.0.0.0" Icon="/WebResources/msdyn_/Images/Area_Default_Icon.png" Id="Enterprise_Sales" ResourceId="Area_Sales" DescriptionResourceId="Sales_Description" ShowGroups="true" ordinalvalue="0">
+      <Group Id="Sales" ResourceId="Area_Sales" DescriptionResourceId="Sales_Description" IsProfile="false" ToolTipResourseId="Sales_ToolTip" ordinalvalue="2">
+        <SubArea Icon="/_imgs/imagestrips/transparent_spacer.gif" Id="Lead" AvailableOffline="false" PassParams="false" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" Sku="All,OnPremise,Live,SPLA" Entity="lead" ordinalvalue="0" solutionaction="Removed" />
+        <SubArea Id="Opportunity" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="opportunity" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="false" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="0" solutionaction="Modified" />
+        <SubArea Icon="/_imgs/imagestrips/transparent_spacer.gif" Id="Competitor" AvailableOffline="false" PassParams="false" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" Sku="All,OnPremise,Live,SPLA" Entity="competitor" ordinalvalue="2" solutionaction="Removed" />
+      </Group>
+      <Group Id="Marketing" ResourceId="Area_Marketing" DescriptionResourceId="Marketing_Description" ToolTipResourseId="Marketing_ToolTip" IntroducedVersion="9.0.0.0" ordinalvalue="4" solutionaction="Removed" />
+      <Group Id="Goals" ResourceId="Area_Goals" DescriptionResourceId="Area_Goals_Description" IsProfile="false" ToolTipResourseId="Area_Goals_ToolTip" ordinalvalue="5" solutionaction="Removed" />
+      <Group Id="Service" ResourceId="SitemapDesigner.NewGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="6" solutionaction="Removed" />
+    </Area>
+    <Area Id="Sales_Settings_Area" Icon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" VectorIcon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" ResourceId="Area_Sales_Settings" IntroducedVersion="9.0.0" ordinalvalue="1">
+      <Group Id="GeneralSettingsGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="1" solutionaction="Modified" />
+      <Group Id="PlaybookManagementGroup" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="3" solutionaction="Modified" />
+      <Group Id="SalesSettingsGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="4" solutionaction="Modified" />
+      <Group Id="ProductCatalogGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="5" solutionaction="Modified" />
+      <Group Id="GoalManagementGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="6" solutionaction="Modified">
+        <SubArea Icon="/_imgs/imagestrips/transparent_spacer.gif" Id="Goals" AvailableOffline="false" PassParams="false" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" Sku="All,OnPremise,Live,SPLA" Entity="goal" ordinalvalue="1" solutionaction="Removed" />
+        <SubArea Id="Goals_cd2b12ec" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="goal" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="false" PassParams="false" Sku="All,OnPremise,Live,SPLA" ordinalvalue="1" solutionaction="Added">
+          <Titles>
+            <Title LCID="1033" Title="Goals" ordinalvalue="0" />
+            <Title LCID="1025" Title="الأهداف" ordinalvalue="1" />
+            <Title LCID="1026" Title="Цели" ordinalvalue="2" />
+            <Title LCID="1027" Title="Objectius" ordinalvalue="3" />
+            <Title LCID="1029" Title="Cíle" ordinalvalue="4" />
+            <Title LCID="1030" Title="Mål" ordinalvalue="5" />
+            <Title LCID="1031" Title="Ziele" ordinalvalue="6" />
+            <Title LCID="1032" Title="Στόχοι" ordinalvalue="7" />
+            <Title LCID="3082" Title="Objetivos" ordinalvalue="8" />
+            <Title LCID="1061" Title="Eesmärgid" ordinalvalue="9" />
+            <Title LCID="1069" Title="Xedeak" ordinalvalue="10" />
+            <Title LCID="1035" Title="Tavoitteet" ordinalvalue="11" />
+            <Title LCID="1036" Title="Objectifs" ordinalvalue="12" />
+            <Title LCID="1110" Title="Obxectivos" ordinalvalue="13" />
+            <Title LCID="1037" Title="מטרות" ordinalvalue="14" />
+            <Title LCID="1081" Title="लक्ष्य" ordinalvalue="15" />
+            <Title LCID="1050" Title="Ciljevi" ordinalvalue="16" />
+            <Title LCID="1038" Title="Célkitűzések" ordinalvalue="17" />
+            <Title LCID="1057" Title="Sasaran" ordinalvalue="18" />
+            <Title LCID="1040" Title="Obiettivi" ordinalvalue="19" />
+            <Title LCID="1041" Title="目標" ordinalvalue="20" />
+            <Title LCID="1087" Title="Мақсаттар" ordinalvalue="21" />
+            <Title LCID="1042" Title="목표" ordinalvalue="22" />
+            <Title LCID="1063" Title="Tikslai" ordinalvalue="23" />
+            <Title LCID="1062" Title="Mērķi" ordinalvalue="24" />
+            <Title LCID="1086" Title="Matlamat" ordinalvalue="25" />
+            <Title LCID="1044" Title="Mål" ordinalvalue="26" />
+            <Title LCID="1043" Title="Doelstellingen" ordinalvalue="27" />
+            <Title LCID="1045" Title="Cele" ordinalvalue="28" />
+            <Title LCID="1046" Title="Metas" ordinalvalue="29" />
+            <Title LCID="2070" Title="Objetivos" ordinalvalue="30" />
+            <Title LCID="1048" Title="Obiective" ordinalvalue="31" />
+            <Title LCID="1049" Title="Цели" ordinalvalue="32" />
+            <Title LCID="1051" Title="Ciele" ordinalvalue="33" />
+            <Title LCID="1060" Title="Cilji" ordinalvalue="34" />
+            <Title LCID="3098" Title="Циљеви" ordinalvalue="35" />
+            <Title LCID="2074" Title="Ciljevi" ordinalvalue="36" />
+            <Title LCID="1053" Title="Mål" ordinalvalue="37" />
+            <Title LCID="1054" Title="เป้าหมาย" ordinalvalue="38" />
+            <Title LCID="1055" Title="Hedefler" ordinalvalue="39" />
+            <Title LCID="1058" Title="Цілі" ordinalvalue="40" />
+            <Title LCID="1066" Title="Mục tiêu" ordinalvalue="41" />
+            <Title LCID="2052" Title="目标" ordinalvalue="42" />
+            <Title LCID="3076" Title="目標" ordinalvalue="43" />
+            <Title LCID="1028" Title="目標" ordinalvalue="44" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="AppExtensionsGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="7" solutionaction="Modified" />
+    </Area>
+    <Area Id="Sales_Insights_Settings_Area" Icon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" VectorIcon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" ResourceId="Area_Sales_Insights_Settings" IntroducedVersion="9.0.0" ordinalvalue="2">
+      <Group Id="SalesInsightsGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="0" solutionaction="Modified" />
+    </Area>
+    <Area Id="Sales_Personal_Settings_Area" Icon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" VectorIcon="$webresource:Sales/_imgs/saleAdminSetting/SettingsIcon.svg" ResourceId="Area_Sales_Personal_Settings" IntroducedVersion="9.0.0" ordinalvalue="3">
+      <Group Id="SalesPersonalSettingsGrp" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown" ordinalvalue="0" solutionaction="Modified" />
+    </Area>
+    <Area Id="HLP" ResourceId="Sales_Area_Help" ShowGroups="true" Icon="/_imgs/icn_help16.png" DescriptionResourceId="Sales_Help_Area_Description" IntroducedVersion="7.0.0.0" ordinalvalue="4">
+      <Group Id="HLP_GRP" ResourceId="Sales_Group_Help" DescriptionResourceId="Sales_Help_Description" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="Help_ToolTip" ordinalvalue="0" solutionaction="Modified">
+        <SubArea Id="Help_Resource_Center" ResourceId="Sales_Area_CustomerCenter" DescriptionResourceId="ResourceCenter_Area_Description" Url="https://go.microsoft.com/fwlink/p/?linkid=853224" IntroducedVersion="7.0.0.0" AvailableOffline="false" PassParams="false" ToolTipResourseId="ResourceCenter_Area_ToolTip" ordinalvalue="0" solutionaction="Modified" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Centro de ventas" languagecode="3082" />
+  </LocalizedNames>
+</AppModuleSiteMap>
