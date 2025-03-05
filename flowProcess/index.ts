@@ -1,13 +1,14 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import FlowProcess from "./FlowProcess";
 import * as React from "react";
+import FlowProcessComponent from "./FlowProcess";
 
-export class flowProcess
+export class FlowProcess
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;
   private phaseValue = 0;
   private phaseValueSelect: number;
+  private nexPhaseValue: number;
 
   constructor() {
     // Constructor inicializado
@@ -25,15 +26,15 @@ export class flowProcess
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
-    const newPhaseValue = context.parameters.Phase.raw ?? 1;
+    const ActuallyPhaseValue = context.parameters.Phase.raw ?? 1;
 
-    if (this.phaseValue !== newPhaseValue) {
-      this.phaseValue = newPhaseValue;
-      console.log("Phase value: ", context.parameters.Phase.raw);
+    if (this.phaseValue !== ActuallyPhaseValue) {
+      this.phaseValue = ActuallyPhaseValue;
+      console.log("Actually phase value: "+ this.phaseValue);
       this.notifyOutputChanged();
     }
 
-    return React.createElement(FlowProcess, {
+    return React.createElement(FlowProcessComponent, {
       phase: this.phaseValue,
 
       //* Actualizar el valor de la fase seleccionada 
@@ -43,14 +44,24 @@ export class flowProcess
         console.log("Phase Select: " +this.phaseValueSelect)
 
         this.notifyOutputChanged();
-      },
+
+      },  onNewPhaseValue: () => {
+      if(this.phaseValue > 0 && this.phaseValue <=13 )
+
+        this.nexPhaseValue = this.phaseValue + 1;  
+        console.log("New phase value: " + this.nexPhaseValue);
+  
+        this.notifyOutputChanged();  
+      }
+
     });
   }
 
  
   public getOutputs(): IOutputs {
     return {
-      ControlPhase: this.phaseValueSelect
+      ControlPhase: this.phaseValueSelect,
+      Phase: this.nexPhaseValue > 0 ? this.nexPhaseValue : this.phaseValue, 
     };
   }
 

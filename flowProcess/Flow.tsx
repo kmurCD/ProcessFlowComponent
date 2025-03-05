@@ -1,5 +1,3 @@
-import CheckCircleIcon from "../flowProcess/src/check_circle.svg";
-import RadioButtonIcon from "../flowProcess/src/radio_button.svg";
 import {
   Popover,
   PopoverTrigger,
@@ -7,11 +5,13 @@ import {
   makeStyles,
   FluentProvider,
   teamsLightTheme,
+  Button,
 } from "@fluentui/react-components";
 import * as React from "react";
 
 interface Props {
   onSelect: (stepNumber: number) => void;
+  onNextPhase: (newPhase:number)=>void;
   phase: number;
   selectPhase: number;
   names: string[];
@@ -22,17 +22,17 @@ const useStyles = makeStyles({
   },
   popoverSurface: {},
 });
-const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names }) => {
-  const styles = useStyles();
+const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names,onNextPhase }) => {
+  
+  
   return (
     <FluentProvider theme={teamsLightTheme}>
       <div className="steps">
         {names.map((name, i) => {
-          const number = i + 1;
+          const number = i+1;
           const isLast = i === names.length - 1;
           return (
             <div key={number} className="flow-container">
-
               {/* Logica para la implementación del texto "Estados de fase" */}
               <div className="text-container">
                 <div
@@ -41,15 +41,16 @@ const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names }) => {
                   onClick={() => onSelect(number)}
                 >
                   <li>{name}</li>
-                </div>  {/* Espaciador para alinear el texto */}
-                {!isLast && <span className="span-space"> </span>} 
+                </div>{" "}
+                {/* Espaciador para alinear el texto */}
+                {!isLast && <span className="span-space"> </span>}
               </div>
 
-               {/* Logica para la implementación del Boton */}
+              {/* Logica para la implementación del Boton */}
               <div className="circle-progress-container">
-                <Popover>
+                <Popover  withArrow positioning={{ position: "before" }}>
                   <PopoverTrigger disableButtonEnhancement>
-                    <button 
+                    <button
                       type="button"
                       className={`circle-container 
                       ${selectPhase === number ? "circle-select" : ""}
@@ -64,31 +65,40 @@ const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names }) => {
                       onClick={() => onSelect(number)}
                     >
                       {/* Logica para la implementación de los iconos */}
-                      <span className="circle-content">                                             
+                      <style></style>
+                      <span className="circle-content">
                         {phase < number ? (
                           <>{number}</>
                         ) : phase > number ? (
-                          <CheckCircleIcon />
+                          <span className="material-icons circle-icon">
+                            task_alt
+                          </span>
                         ) : (
-                          <RadioButtonIcon />
+                          <span className="material-icons circle-icon">
+                            radio_button_checked
+                          </span>
                         )}
                       </span>
                     </button>
                   </PopoverTrigger>
 
-                   {/* Pantalla popover que muestra la información de la fase*/}
-                  <div>                
-                    <PopoverSurface tabIndex={-1}>
+                  {/* Pantalla popover que muestra la información de la fase*/}
+                  <div>
+                    <PopoverSurface className="information-phase" tabIndex={-1}>
                       <div>
                         <h3>Paso {number}</h3>
                         <p>{name}</p>
-                        <button className="boton-clase">soy un boton</button>
+
+                        <Button className="informattion-button" onClick={() => onNextPhase(number)}>
+                          Fase siguiente
+
+                        </Button>
                       </div>
                     </PopoverSurface>
                   </div>
                 </Popover>
 
-                    {/* Logica para la implementación de la barra de progreso*/}
+                {/* Logica para la implementación de la barra de progreso*/}
                 {!isLast && (
                   <div
                     className={`${phase <= number ? "progress-after" : ""} 

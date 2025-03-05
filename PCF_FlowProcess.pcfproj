@@ -8,8 +8,8 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')" />
 
   <PropertyGroup>
-    <Name>FlowProcess</Name>
-    <ProjectGuid>94dd97c3-f25d-4b02-adab-3f741c209cc8</ProjectGuid>
+    <Name>TransligraPCF</Name>
+    <ProjectGuid>c57f5027-7564-498b-924f-57630425ac20</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
 

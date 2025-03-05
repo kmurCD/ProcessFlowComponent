@@ -7,11 +7,13 @@ import { useState } from "react";
 interface FlowProcessProps {
   phase: number;
   onPhaseValueSelect: (phaseValue: number) => void;
+  onNewPhaseValue: () => void;
 }
 
-const FlowProcess: React.FC<FlowProcessProps> = ({
+const FlowProcessComponent: React.FC<FlowProcessProps> = ({
   phase,
   onPhaseValueSelect,
+  onNewPhaseValue
 }) => {
   const names = [
     "Prospección",
@@ -30,11 +32,11 @@ const FlowProcess: React.FC<FlowProcessProps> = ({
     "Entregado",
   ];
 
-  const [PhaseValue, setPhaseValue] = useState<number>(0);
+  const [phaseValue, setPhaseValue] = useState<number>(0);
+
 
   //* Al ejecutar onSelect, se actualiza selectedStep con el nuevo número.
   //* Esto provoca un re-render, enviando el nuevo valor a selectNumber en Flow.
-
   const onSelect = (number: number) => {
     setPhaseValue(number);
     onPhaseValueSelect(number); //! Enviar el valor al componente index
@@ -53,12 +55,13 @@ const FlowProcess: React.FC<FlowProcessProps> = ({
         <Flow
           onSelect={onSelect}
           phase={phase}
-          selectPhase={PhaseValue}
+          selectPhase={phaseValue}
           names={names}
+          onNextPhase={onNewPhaseValue}
         />
       </div>
     </div>
   );
 };
 
-export default React.memo(FlowProcess);
+export default React.memo(FlowProcessComponent);
