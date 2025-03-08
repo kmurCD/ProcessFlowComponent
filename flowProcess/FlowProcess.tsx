@@ -2,38 +2,22 @@ import * as React from "react";
 import Flow from "./Flow";
 import "./css/FlowProcess.css";
 import { useState } from "react";
-
-
+import { namePhases } from "./data/field_oportunity";
 interface FlowProcessProps {
   phase: number;
   onPhaseValueSelect: (phaseValue: number) => void;
-  onNewPhaseValue: () => void;
+  onNewPhase: (value: boolean) => void;
 }
 
-const FlowProcess: React.FC<FlowProcessProps> = ({
+const ComponentFlowProcess: React.FC<FlowProcessProps> = ({
   phase,
   onPhaseValueSelect,
-  onNewPhaseValue
+  onNewPhase,
 }) => {
-  const names = [
-    "Prospección",
-    "Calificación de Oportunidad",
-    "Levantamiento de requerimiento",
-    "Elaboración de la Propuesta Técnica",
-    "Entrega propuesta Técnica",
-    "Presentación ejecutiva solución",
-    "Aprobación propuesta Técnica",
-    "Elaboración de la Propuesta Económica",
-    "Entrega Propuesta Económica",
-    "Negociación",
-    "Formalización",
-    "Cierre Ganada",
-    "Ejecución",
-    "Entregado",
-  ];
+  /**Declaraciones */
 
   const [phaseValue, setPhaseValue] = useState<number>(0);
-
+  const names = namePhases[1];
 
   //* Al ejecutar onSelect, se actualiza selectedStep con el nuevo número.
   //* Esto provoca un re-render, enviando el nuevo valor a selectNumber en Flow.
@@ -48,7 +32,7 @@ const FlowProcess: React.FC<FlowProcessProps> = ({
         <span style={{ fontWeight: "bold", color: "black", fontSize: "15" }}>
           Estado actual:
         </span>
-        <span style={{ color: "red", fontSize: "15" }}> {names[phase-1]}</span>
+        <span style={{ color: "red", fontSize: "15" }}>{names[phase - 1]}</span>
       </div>
 
       <div className="container-section">
@@ -57,11 +41,11 @@ const FlowProcess: React.FC<FlowProcessProps> = ({
           phase={phase}
           selectPhase={phaseValue}
           names={names}
-          onNextPhase={onNewPhaseValue}
+          onNewPhase={onNewPhase}
         />
       </div>
     </div>
   );
 };
 
-export default React.memo(FlowProcess);
+export default React.memo(ComponentFlowProcess);

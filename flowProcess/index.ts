@@ -1,18 +1,18 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import FlowProcess from "./FlowProcess";
+import ComponentFlowProcess from "./FlowProcess";
 import * as React from "react";
 
-export class flowProcess
+export class FlowProcess
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
   private notifyOutputChanged: () => void;
   private phaseValue = 0;
   private phaseValueSelect: number;
-    newPhaseValue: number;
+  private newValue: number;
 
   constructor() {
     // Constructor inicializado
-}
+  }
   public init(
     context: ComponentFramework.Context<IInputs>,
     notifyOutputChanged: () => void,
@@ -26,43 +26,55 @@ export class flowProcess
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
-    const newPhaseValue = context.parameters.Phase.raw ?? 1;
+    const actuallyPhaseValue = context.parameters.Phase.raw ?? 1;
 
-    if (this.phaseValue !== newPhaseValue) {
-      this.phaseValue = newPhaseValue;
+    if (this.phaseValue !== actuallyPhaseValue) {
+      this.phaseValue = actuallyPhaseValue;
       console.log("Phase value: ", context.parameters.Phase.raw);
       this.notifyOutputChanged();
     }
 
-    return React.createElement(FlowProcess, {
+    return React.createElement(ComponentFlowProcess, {
       phase: this.phaseValue,
 
-      //* Actualizar el valor de la fase seleccionada 
+      //! Logica de seleción
       onPhaseValueSelect: (value: number) => {
         this.phaseValueSelect = value;
-    
-        console.log("Phase Select: " +this.phaseValueSelect)
-
+        console.log("Phase Select: " + this.phaseValueSelect);
         this.notifyOutputChanged();
-      },  onNewPhaseValue: () => {
-        this.newPhaseValue = this.phaseValue + 1;  // Incrementa el valor en +1
-        console.log("New phase value: " + this.newPhaseValue);
-  
-        this.notifyOutputChanged();  // Notifica el cambio a Dynamics 365
-      }
-
+      },
+      //! Logica para pasar a siguiente phase
+      onNewPhase: (value: boolean) => {
+        if (value == true) {
+          if (this.phaseValue > 0 && this.phaseValue < 14) {
+            this.newValue = this.phaseValue + 1; // Incrementa el valor en +1
+            console.log("New phase value: " + this.newValue);
+          } else {
+            console.log("Cannot increment. Phase value is at its maximum (14).");
+          }
+          
+        } else { // value == false
+          //! Logica para pasar a siguiente phase
+          if (this.phaseValue > 1 && this.phaseValue <= 14) {
+            this.newValue = this.phaseValue - 1; // Decrementa el valor en -1
+            console.log("New phase value: " + this.newValue);
+          } else {
+            console.log("Cannot decrement. Phase value is at its minimum (1).");
+          }
+        }
+        this.notifyOutputChanged(); // Notifica el cambio a Dynamics 365
+      },
     });
   }
 
- 
   public getOutputs(): IOutputs {
     return {
       ControlPhase: this.phaseValueSelect,
-      Phase: this.newPhaseValue > 0 ? this.newPhaseValue : this.phaseValue, 
+      Phase: this.newValue > 0 ? this.newValue : this.phaseValue,
     };
   }
 
   public destroy(): void {
     // Cleanup logic if needed
-}
+  }
 }

@@ -1,35 +1,44 @@
 import {
+  Label,
   Popover,
   PopoverTrigger,
   PopoverSurface,
-  makeStyles,
   FluentProvider,
   teamsLightTheme,
   Button,
 } from "@fluentui/react-components";
 import * as React from "react";
+import CheckCircleFlow from "../FlowProcess/assets/check_circle_flow.svg";
+import RadioCircleFlow from "../FlowProcess/assets/radio_button.svg";
+import FormValidation from "./FormValidation";
+
 
 interface Props {
   onSelect: (stepNumber: number) => void;
-  onNextPhase: (newPhase:number)=>void;
+  onNewPhase: (value: boolean) => void;
   phase: number;
   selectPhase: number;
   names: string[];
 }
-const useStyles = makeStyles({
-  contentHeader: {
-    marginTop: "0",
-  },
-  popoverSurface: {},
-});
-const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names,onNextPhase }) => {
-  
-  
+
+const Flow: React.FC<Props> = ({
+  onSelect,
+  phase,
+  selectPhase,
+  names,
+  onNewPhase,
+}) => {
   return (
     <FluentProvider theme={teamsLightTheme}>
       <div className="steps">
+        <div
+          style={{ width: "300px", height: "400px", backgroundColor: "green" }}
+        >
+          <FormValidation onNewPhase={onNewPhase} />
+        </div>
+
         {names.map((name, i) => {
-          const number = i+1;
+          const number = i + 1;
           const isLast = i === names.length - 1;
           return (
             <div key={number} className="flow-container">
@@ -48,17 +57,16 @@ const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names,onNextPhase
 
               {/* Logica para la implementación del Boton */}
               <div className="circle-progress-container">
-                <Popover  withArrow positioning={{ position: "before" }}>
+                <Popover withArrow positioning={{ position: "before" }}>
                   <PopoverTrigger disableButtonEnhancement>
                     <button
                       type="button"
                       className={`circle-container 
                       ${selectPhase === number ? "circle-select" : ""}
-                      ${
-                        phase === number
+                      ${phase === number
                           ? "circle-container circle-active"
                           : "inactive"
-                      }
+                        }
                       ${phase < number ? "circle-container-1" : ""}
                       ${phase > number ? "circle-container-2" : ""}
                     `}
@@ -70,12 +78,12 @@ const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names,onNextPhase
                         {phase < number ? (
                           <>{number}</>
                         ) : phase > number ? (
-                          <span className="material-icons circle-icon">
-                            task_alt
+                          <span className="circle-icon">
+                            <CheckCircleFlow />
                           </span>
                         ) : (
-                          <span className="material-icons circle-icon">
-                            radio_button_checked
+                          <span className="circle-icon">
+                            <RadioCircleFlow />
                           </span>
                         )}
                       </span>
@@ -86,13 +94,24 @@ const Flow: React.FC<Props> = ({ onSelect, phase, selectPhase, names,onNextPhase
                   <div>
                     <PopoverSurface className="information-phase" tabIndex={-1}>
                       <div>
-                        <h3>Paso {number}</h3>
-                        <p>{name}</p>
-
-                        <Button className="informattion-button" onClick={() => onNextPhase(number)}>
-                          Fase siguiente
-
-                        </Button>
+                        <span
+                          style={{
+                            width: "100%",
+                            height: "20%",
+                            display: "flex",
+                          }}
+                        >
+                          <h3>Paso{name}</h3>
+                        </span>
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "80%",
+                            display: "flex",
+                          }}
+                        >
+                          {/* <FormValidation onNewPhase={onNewPhase} />*/}
+                        </div>
                       </div>
                     </PopoverSurface>
                   </div>
