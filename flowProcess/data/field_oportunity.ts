@@ -3,11 +3,9 @@ export const fieldsPhaseOportunity:Record<number, string[]> = {
       "Prospección",
       "Calificación de Oportunidad",
       "Levantamiento de requerimiento",
-      "Elaboración de la Propuesta Técnica",
-      "Entrega propuesta Técnica",
-      "Presentación ejecutiva solución",
-      "Aprobación propuesta Técnica",
-      "Elaboración de la Propuesta Económica",
+      "Inicio del Proyecto",
+      
+      
     ],
     "2": [
       "Inicio del Proyecto",

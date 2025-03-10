@@ -12,7 +12,6 @@ import CheckCircleFlow from "../FlowProcess/assets/check_circle_flow.svg";
 import RadioCircleFlow from "../FlowProcess/assets/radio_button.svg";
 import FormValidation from "./FormValidation";
 
-
 interface Props {
   onSelect: (stepNumber: number) => void;
   onNewPhase: (value: boolean) => void;
@@ -31,12 +30,6 @@ const Flow: React.FC<Props> = ({
   return (
     <FluentProvider theme={teamsLightTheme}>
       <div className="steps">
-        <div
-          style={{ width: "300px", height: "400px", backgroundColor: "green" }}
-        >
-          <FormValidation onNewPhase={onNewPhase} />
-        </div>
-
         {names.map((name, i) => {
           const number = i + 1;
           const isLast = i === names.length - 1;
@@ -63,10 +56,11 @@ const Flow: React.FC<Props> = ({
                       type="button"
                       className={`circle-container 
                       ${selectPhase === number ? "circle-select" : ""}
-                      ${phase === number
+                      ${
+                        phase === number
                           ? "circle-container circle-active"
                           : "inactive"
-                        }
+                      }
                       ${phase < number ? "circle-container-1" : ""}
                       ${phase > number ? "circle-container-2" : ""}
                     `}
@@ -92,25 +86,27 @@ const Flow: React.FC<Props> = ({
 
                   {/* Pantalla popover que muestra la información de la fase*/}
                   <div>
-                    <PopoverSurface className="information-phase" tabIndex={-1}>
-                      <div>
-                        <span
+                    <PopoverSurface tabIndex={-1}>
+                      <div className="information-phase">
+                        <div
                           style={{
-                            width: "100%",
-                            height: "20%",
+                            height: "10%",
                             display: "flex",
+                            alignItems: "center",
+                            textAlign: "center",
+                            padding: "5px",
+                            color:"red"
                           }}
                         >
-                          <h3>Paso{name}</h3>
-                        </span>
+                          <p style={{ margin: 0 }}>Fase {name}</p>
+                        </div>
                         <div
                           style={{
                             width: "100%",
-                            height: "80%",
-                            display: "flex",
+                            height: "90%",
                           }}
                         >
-                          {/* <FormValidation onNewPhase={onNewPhase} />*/}
+                          <FormValidation onNewPhase={onNewPhase} />
                         </div>
                       </div>
                     </PopoverSurface>

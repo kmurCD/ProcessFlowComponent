@@ -21,6 +21,7 @@ const ComponentFlowProcess: React.FC<FlowProcessProps> = ({
 
   //* Al ejecutar onSelect, se actualiza selectedStep con el nuevo número.
   //* Esto provoca un re-render, enviando el nuevo valor a selectNumber en Flow.
+
   const onSelect = (number: number) => {
     setPhaseValue(number);
     onPhaseValueSelect(number); //! Enviar el valor al componente index
