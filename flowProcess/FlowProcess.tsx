@@ -1,21 +1,20 @@
 import * as React from "react";
-import Flow from "./Flow";
-import "./css/FlowProcess.css";
+import Flow from "./component/bodyFlow/bodyFlow";
 import { useState } from "react";
 import { namePhases } from "./data/field_oportunity";
-interface FlowProcessProps {
+import "../flowProcess/FlowProcess.css";
+
+interface flowProcessProps {
   phase: number;
   onPhaseValueSelect: (phaseValue: number) => void;
   onNewPhase: (value: boolean) => void;
 }
 
-const ComponentFlowProcess: React.FC<FlowProcessProps> = ({
+const ComponentFlowProcess: React.FC<flowProcessProps> = ({
   phase,
   onPhaseValueSelect,
   onNewPhase,
 }) => {
-  /**Declaraciones */
-
   const [phaseValue, setPhaseValue] = useState<number>(0);
   const names = namePhases[1];
 
@@ -33,16 +32,18 @@ const ComponentFlowProcess: React.FC<FlowProcessProps> = ({
         <span style={{ fontWeight: "bold", color: "black", fontSize: "15" }}>
           Estado actual:
         </span>
-        <span style={{ color: "red", fontSize: "15" }}>{names[phase - 1]}</span>
+        <span style={{ color: "red", fontSize: "15", textAlign: "center" }}>
+          {names[phase - 1]}
+        </span>
       </div>
 
       <div className="container-section">
         <Flow
-          onSelect={onSelect}
           phase={phase}
           selectPhase={phaseValue}
           names={names}
           onNewPhase={onNewPhase}
+          onSelect={onSelect}
         />
       </div>
     </div>

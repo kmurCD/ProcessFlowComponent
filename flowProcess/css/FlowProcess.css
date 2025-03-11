@@ -55,12 +55,15 @@
 }
 /** Contenedor de cada círculo */
 .circle-container {
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0;
+  min-width: 40px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   text-align: center;
+  
 }
 /** Estado actual */
 .circle-container-1 {
@@ -142,6 +145,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  
 }
 
 .form-phase{
@@ -185,6 +189,15 @@
 }
 
 .informattion-button:active {
-  transform: translateY(2px);
+  transform: translateY(0.5px);
 }
 
+.container-flowProcess {
+  position: relative;
+  z-index: 1; /* Asegúrate de que esté por debajo del popover */
+}
+
+.popover {
+  position: absolute;
+  z-index: 10; /* Asegúrate de que el popover tenga un valor más alto */
+}

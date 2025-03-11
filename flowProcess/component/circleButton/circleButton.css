@@ -1,0 +1,84 @@
+.circle-container {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0;
+    min-width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #115ea3;
+  }
+  .circle-container:hover{
+    background-color: #707070;
+  }
+  /** Estado actual */
+  .circle-container-1 {
+    border: 0.5px solid rgb(109, 109, 109);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  /** Estado menor que el actual */
+  .circle-container-2 {
+    border: none;
+    background-color: #115ea3;
+    color: rgb(255, 255, 255);
+  }
+  /** Contenido dentro del círculo */
+  .circle-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle-icon {
+    display: flex;
+    align-items: center;
+  }
+  /** Círculo seleccionado */
+  .circle-select {
+    color: rgb(255, 255, 255);
+    background-color: #707070;
+  }
+  /** Círculo activo */
+  .circle-active {
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #da3b01;
+  }
+  /** Botones */
+
+.callout {
+  width: 300px;
+  padding: 14px 14px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.space {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: #115ea3;
+}
+
+.button-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+.button {
+  background-color: red;
+  border: black;
+}
+.button:hover{
+  background-color: #adadad;
+  color: black;
+  border: black;
+}
