@@ -43,6 +43,8 @@ const BodyFlow: React.FC<Props> = ({
                 selectPhase={selectPhase}
                 number={number}
                 onSelect={() => onSelect(number)}
+                onNewPhase={onNewPhase}
+                name={name}
               ></CircleButton>
               {!isLast && (
                 <div

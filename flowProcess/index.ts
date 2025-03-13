@@ -1,6 +1,9 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 import ComponentFlowProcess from "./FlowProcess";
 import * as React from "react";
+import { ContactValue } from "./entity/ContactValue";
+import { data } from "./data/data_oportunity";
+import { Phase } from "./data/data_type";
 
 export class FlowProcess
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
@@ -28,11 +31,14 @@ export class FlowProcess
   ): React.ReactElement {
     const actuallyPhaseValue = context.parameters.Phase.raw ?? 1;
 
+
     if (this.phaseValue !== actuallyPhaseValue) {
       this.phaseValue = actuallyPhaseValue;
       console.log("Phase value: ", context.parameters.Phase.raw);
       this.notifyOutputChanged();
     }
+
+
 
     return React.createElement(ComponentFlowProcess, {
       phase: this.phaseValue,
@@ -40,6 +46,16 @@ export class FlowProcess
       //! Logica de seleción
       onPhaseValueSelect: (value: number) => {
         this.phaseValueSelect = value;
+
+        Object.values(Phase).forEach((key) => {
+          if (typeof key === 'number' && key === (this.phaseValueSelect as Phase)) {
+            console.log(`Datos para la fase ${Phase[key]}:`, data[key]);
+          }
+
+        })
+
+
+
         console.log("Phase Select: " + this.phaseValueSelect);
         this.notifyOutputChanged();
       },
@@ -69,7 +85,7 @@ export class FlowProcess
 
   public getOutputs(): IOutputs {
     return {
-      ControlPhase: this.phaseValueSelect,
+      centella_controlphase: this.phaseValueSelect,
       Phase: this.newValue > 0 ? this.newValue : this.phaseValue,
     };
   }

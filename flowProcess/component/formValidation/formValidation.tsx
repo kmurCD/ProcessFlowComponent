@@ -1,6 +1,6 @@
 import * as React from "react";
 import ErrorCircleFlow from "../formValidation/assets/error_flow.svg";
-import { fieldsPhaseOportunity } from "../../data/field_oportunity";
+import { fieldsPhaseOportunity } from "../../data/data_oportunity";
 import { ToggleButton } from "@fluentui/react-components";
 import "../formValidation/formValidation.css"
 

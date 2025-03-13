@@ -1,13 +1,13 @@
 
 /*! FORMULARIO DE VALIDACIÓN */
 .information-phase {
-  max-width: 250px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 300px;
   padding: 5px;
 }
 .form-phase-container{
   padding: 5px;
-  height: 100%;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
   
@@ -25,7 +25,7 @@
 }
 .button-validation-container{
   display: flex;
-  height: 100%;
+  height: auto;
   align-items: center;
   justify-content: space-between;
 }

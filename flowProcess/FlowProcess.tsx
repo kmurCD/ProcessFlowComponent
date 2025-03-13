@@ -1,7 +1,7 @@
 import * as React from "react";
 import Flow from "./component/bodyFlow/bodyFlow";
 import { useState } from "react";
-import { namePhases } from "./data/field_oportunity";
+import { namePhases } from "./data/data_oportunity";
 import "../flowProcess/FlowProcess.css";
 
 interface flowProcessProps {
