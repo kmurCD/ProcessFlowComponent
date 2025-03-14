@@ -9,9 +9,10 @@ export class FlowProcess
 {
   /**========Variables========**/
   private notifyOutputChanged: () => void;
-  phaseCurrent: number = 0;
-  phaseSelect: number = 0;
-  newPhase: number = 0;
+  phaseCurrent: number ;
+  phaseSelect: number ;
+  newPhase: number ;
+  dataContext: ComponentFramework.Context<IInputs>;
 
   constructor() {
     /**=======Constructor inicializado=======**/
@@ -34,7 +35,18 @@ export class FlowProcess
     this.phaseSelect = value;
     console.log("Phase selected: ", this.phaseSelect);
 
-    const dataItem = data[value as keyof typeof data] || [];
+    
+
+    const dataItem = data[value] || [];
+
+    dataItem.forEach((item) => {
+      const param = (this.dataContext.parameters as unknown) as Record<string, { raw: number }>;
+      const dataContext = param[`${item.id}`]?.raw ?? null;
+      
+      item.contenido =  dataContext;
+      console.log("Data:", dataItem);
+    });
+
     this.notifyOutputChanged();
 
     return dataItem;
@@ -72,6 +84,7 @@ export class FlowProcess
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
+    this.dataContext = context;
     this.onUpdatePhase(context.parameters.phase.raw ?? 1);
 
     /**=======Renderiza el componente=======**/

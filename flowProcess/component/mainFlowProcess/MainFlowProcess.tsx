@@ -20,7 +20,7 @@ const MainFlowProcess: React.FC<Props> = ({
   const [onSelectPhase, setSelectPhase] = useState<number>(0);
   const [data, setData] = useState<DataItem[]>([]);
   /**====Nombres de eportunidad */
-  const names = namePhases as string[];
+  const names = namePhases;
 
   const onSelect = (number: number) => {
     setSelectPhase(number);
@@ -29,7 +29,8 @@ const MainFlowProcess: React.FC<Props> = ({
   };
 
   return (
-    <div className="container-flowProcess">
+    <div className="container-mainFlowProcess"> 
+      <div className="container-flowProcess">
       <div className="status">
         <span style={{ fontWeight: "bold", color: "black", fontSize: "15" }}>
           Estado actual:
@@ -47,6 +48,8 @@ const MainFlowProcess: React.FC<Props> = ({
         /></ContextGeneral.Provider>
       </div>
     </div>
+    </div>
+    
   );
 };
 

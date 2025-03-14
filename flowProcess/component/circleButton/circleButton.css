@@ -47,15 +47,24 @@
   color: rgb(255, 255, 255);
   background-color: #da3b01;
 }
+
+.form-val-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  max-width: 300px !important;
+}
+
 /** Botones */
 
-.callout {
-  width: 600px;
-  max-height: 400px;
+.callout-container {
+  min-width: 300px;
+  max-width: 350px;
+  max-height: 600px;
   padding: 14px 14px;
 }
 
-.container {
+.container-button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -68,13 +77,14 @@
   background-color: #115ea3;
 }
 
-.button-container {
-  width: 75%;
+.button-next-back {
+  min-width: 75%;
   display: flex;
   justify-content: end;
   align-items: center;
   margin-top: 10px;
   margin-right: 15px;
+  background-color: #115ea3;
 }
 .form-button-next {
   background-color: red;
@@ -93,8 +103,8 @@
   display: flex;
   align-items: center;
   max-width: 300px;
-  height: 50px;
-  padding: 5px;
+  max-height: 50px;
+  padding: 15px;
 }
 
 .title-name {

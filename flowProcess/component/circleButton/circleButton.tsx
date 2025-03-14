@@ -34,7 +34,7 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
   onSelect,
   onNewPhase,
 }) => {
-  const { contextSelectPhase, phase } = React.useContext(ContextGeneral);
+  const { contextSelectPhase, phase,names } = React.useContext(ContextGeneral);
   const [isCalloutVisible, { toggle: toggleIsCalloutVisible }] =
     useBoolean(false);
   const buttonId = useId("callout-button");
@@ -79,18 +79,18 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
         {isCalloutVisible ? (
           <Callout
             role="alertdialog"
-            className="callout"
+            className="callout-container"
             gapSpace={0}
             target={`#${buttonId}`}
             onDismiss={toggleIsCalloutVisible}
             setInitialFocus
             hideOverflow={true}
-            directionalHint={DirectionalHint.leftBottomEdge}
+            directionalHint={DirectionalHint.bottomRightEdge}
             preventDismissOnScroll={true}
           >
             <div className="icon-container">
               <div className="title-name">
-                <h4>{name}</h4>
+                <h4>{names[contextSelectPhase-1]}</h4>
               </div>
               <div className="icon-close">
                 <IconButton
@@ -101,7 +101,10 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
                 />
               </div>
             </div>
-            <FormValidation></FormValidation>
+            <div className="form-val-container">
+            <FormValidation />
+            </div>
+            
 
             <DialogConfirmation
               isVisible={isDialogVisible}
@@ -113,9 +116,9 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
               handleTabKey={FocusZoneTabbableElements.all}
               isCircularNavigation
             >
-              <div className="container">
+              <div className="container-button">
                 <div className="space"></div>
-                <div className="button-container">
+                <div className="button-next-back">
                   {isCalloutVisible && phase == contextSelectPhase && (
                     <PrimaryButton
                       className={"form-button-next"}

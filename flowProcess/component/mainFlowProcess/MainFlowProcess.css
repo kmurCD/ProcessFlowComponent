@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /** Contenedor principal */
+.container-mainFlowProcess{
+  display: flex;
+  justify-content: center;
+}
 .container-flowProcess {
-  max-width:  512px;
+  min-width: 525px;
+  max-width:  600px;
   max-height: 900px;
   padding: 5px;
   overflow: hidden;
