@@ -1,96 +1,96 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import ComponentFlowProcess from "./FlowProcess";
 import * as React from "react";
-import { ContactValue } from "./entity/ContactValue";
-import { data } from "./data/data_oportunity";
-import { Phase } from "./data/data_type";
+import MainFlowProcess from "./component/mainFlowProcess/MainFlowProcess";
+import { DataItem, DataType } from "./data/DataType";
+import { data } from "./data/DataOportunity";
 
 export class FlowProcess
   implements ComponentFramework.StandardControl<IInputs, IOutputs>
 {
+  /**========Variables========**/
   private notifyOutputChanged: () => void;
-  private phaseValue = 0;
-  private phaseValueSelect: number;
-  private newValue: number;
+  phaseCurrent: number = 0;
+  phaseSelect: number = 0;
+  newPhase: number = 0;
 
   constructor() {
-    // Constructor inicializado
+    /**=======Constructor inicializado=======**/
   }
+
   public init(
     context: ComponentFramework.Context<IInputs>,
     notifyOutputChanged: () => void,
     state: ComponentFramework.Dictionary
   ): void {
     this.notifyOutputChanged = notifyOutputChanged;
-    this.updateView(context);
-    this.phaseValueSelect = 0;
+
+    /**=======Inicializa el valor de la fase=======**/
+    this.phaseCurrent = context.parameters.phase.raw ?? 1;
+    console.log("Phase value: ", this.phaseCurrent);
+  }
+
+  /**=======Selecion de fase y retornar el tipo de dato=======**/
+  private onPhaseSelect(value: number): DataItem[] {
+    this.phaseSelect = value;
+    console.log("Phase selected: ", this.phaseSelect);
+
+    const dataItem = data[value as keyof typeof data] || [];
+    this.notifyOutputChanged();
+
+    return dataItem;
+  }
+
+  /**=======Nueva de fase=======**/
+  private onNewPhase(value: boolean) {
+    if (value == true) {
+      if (this.phaseCurrent > 0 && this.phaseCurrent < 14) {
+        this.newPhase = this.phaseCurrent + 1;
+        console.log("New phase value: " + this.newPhase);
+      } else {
+        console.log("Cannot increment. Phase value is at its maximum (14).");
+      }
+    } else {
+      if (this.phaseCurrent > 1 && this.phaseCurrent <= 14) {
+        this.newPhase = this.phaseCurrent - 1;
+        console.log("New phase value: " + this.newPhase);
+      } else {
+        console.log("Cannot decrement. Phase value is at its minimum (1).");
+      }
+    }
+
+    this.notifyOutputChanged();
+  }
+
+  /**=======Actualiza la fase=======**/
+  private onUpdatePhase(value: number) {
+    if (value != this.phaseCurrent) {
+      this.phaseCurrent = value;
+      this.notifyOutputChanged();
+    }
   }
 
   public updateView(
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
-    const actuallyPhaseValue = context.parameters.Phase.raw ?? 1;
+    this.onUpdatePhase(context.parameters.phase.raw ?? 1);
 
-
-    if (this.phaseValue !== actuallyPhaseValue) {
-      this.phaseValue = actuallyPhaseValue;
-      console.log("Phase value: ", context.parameters.Phase.raw);
-      this.notifyOutputChanged();
-    }
-
-
-
-    return React.createElement(ComponentFlowProcess, {
-      phase: this.phaseValue,
-
-      //! Logica de seleción
-      onPhaseValueSelect: (value: number) => {
-        this.phaseValueSelect = value;
-
-        Object.values(Phase).forEach((key) => {
-          if (typeof key === 'number' && key === (this.phaseValueSelect as Phase)) {
-            console.log(`Datos para la fase ${Phase[key]}:`, data[key]);
-          }
-
-        })
-
-
-
-        console.log("Phase Select: " + this.phaseValueSelect);
-        this.notifyOutputChanged();
-      },
-      //! Logica para pasar a siguiente phase
-      onNewPhase: (value: boolean) => {
-        if (value == true) {
-          if (this.phaseValue > 0 && this.phaseValue < 14) {
-            this.newValue = this.phaseValue + 1; // Incrementa el valor en +1
-            console.log("New phase value: " + this.newValue);
-          } else {
-            console.log("Cannot increment. Phase value is at its maximum (14).");
-          }
-          
-        } else { // value == false
-          //! Logica para pasar a siguiente phase
-          if (this.phaseValue > 1 && this.phaseValue <= 14) {
-            this.newValue = this.phaseValue - 1; // Decrementa el valor en -1
-            console.log("New phase value: " + this.newValue);
-          } else {
-            console.log("Cannot decrement. Phase value is at its minimum (1).");
-          }
-        }
-        this.notifyOutputChanged(); // Notifica el cambio a Dynamics 365
-      },
+    /**=======Renderiza el componente=======**/
+    return React.createElement(MainFlowProcess, {
+      phase: this.phaseCurrent,
+      onPhaseSelect: (value: number) => this.onPhaseSelect(value),
+      onNewPhase: (value: boolean) => this.onNewPhase(value),
     });
   }
 
   public getOutputs(): IOutputs {
     return {
-      centella_controlphase: this.phaseValueSelect,
-      Phase: this.newValue > 0 ? this.newValue : this.phaseValue,
+      controlphase: this.phaseSelect,
+      phase: this.newPhase > 0 ? this.newPhase : this.phaseCurrent,
     };
   }
 
   public destroy(): void {
-    // Cleanup logic if needed
+    /**=======Destruye el componente
+     * y libera los recursos=======**/
   }
 }

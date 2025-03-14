@@ -1,16 +1,10 @@
 import * as React from "react";
 import {
-  mergeStyleSets,
-  FocusTrapCallout,
   FocusZone,
   FocusZoneTabbableElements,
-  FontWeights,
-  Stack,
-  Text,
   DirectionalHint,
   ThemeProvider,
   FluentTheme,
-  FocusTrapZone,
   Callout,
 } from "@fluentui/react";
 import { useBoolean, useId } from "@fluentui/react-hooks";
@@ -23,28 +17,24 @@ import {
   PrimaryButton,
 } from "@fluentui/react/lib/Button";
 import "../circleButton/circleButton.css";
-import FormValidation from "../formValidation/formValidation";
 import { useState } from "react";
-import { DialogConfirmation } from "../dialogConfirmation/dialogConfirmation";
-import { Value } from "sass";
+import { DialogConfirmation } from "../dialogConfirmation/DialogConfirmation";
+import FormValidation from "../formValidation/FormValidation";
+import { ContextGeneral } from "../../context/ContextGeneral";
 
 interface PropsCircleButton {
-  phase: number;
-  selectPhase: number;
   number: number;
-  name: string;
+
   onNewPhase: (value: boolean) => void;
   onSelect: (value: number) => void;
 }
 
 export const CircleButton: React.FC<PropsCircleButton> = ({
-  phase,
-  selectPhase,
   number,
   onSelect,
   onNewPhase,
-  name,
 }) => {
+  const { contextSelectPhase, phase } = React.useContext(ContextGeneral);
   const [isCalloutVisible, { toggle: toggleIsCalloutVisible }] =
     useBoolean(false);
   const buttonId = useId("callout-button");
@@ -58,7 +48,7 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
       <>
         <DefaultButton
           className={`circle-container 
-          ${selectPhase === number ? "circle-select" : ""}
+          ${contextSelectPhase === number ? "circle-select" : ""}
           ${phase === number ? "circle-container circle-active" : "inactive"}
           ${phase < number ? "circle-container-1" : ""}
           ${phase > number ? "circle-container-2" : ""}
@@ -111,11 +101,7 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
                 />
               </div>
             </div>
-            <FormValidation
-              onNewPhase={function (value: boolean): void {
-                throw new Error("Function not implemented.");
-              }}
-            ></FormValidation>
+            <FormValidation></FormValidation>
 
             <DialogConfirmation
               isVisible={isDialogVisible}
@@ -130,7 +116,7 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
               <div className="container">
                 <div className="space"></div>
                 <div className="button-container">
-                  {isCalloutVisible && phase == selectPhase && (
+                  {isCalloutVisible && phase == contextSelectPhase && (
                     <PrimaryButton
                       className={"form-button-next"}
                       onClick={openDialog}
@@ -138,7 +124,7 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
                       Siguiente
                     </PrimaryButton>
                   )}
-                  {isCalloutVisible && phase == selectPhase && (
+                  {isCalloutVisible && phase == contextSelectPhase && (
                     <DefaultButton
                       className={"form-button-cancel"}
                       onClick={() => {

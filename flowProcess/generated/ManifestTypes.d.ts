@@ -4,8 +4,8 @@
 
 // Define IInputs and IOutputs Type. They should match with ControlManifest.
 export interface IInputs {
-    Phase: ComponentFramework.PropertyTypes.OptionSetProperty;
-    centella_controlphase: ComponentFramework.PropertyTypes.WholeNumberProperty;
+    phase: ComponentFramework.PropertyTypes.OptionSetProperty;
+    controlphase: ComponentFramework.PropertyTypes.WholeNumberProperty;
     description: ComponentFramework.PropertyTypes.StringProperty;
     parentcontactid: ComponentFramework.PropertyTypes.LookupProperty;
     proyectoComprometido: ComponentFramework.PropertyTypes.TwoOptionsProperty;
@@ -47,8 +47,8 @@ export interface IInputs {
     actaFinalEntrega: ComponentFramework.PropertyTypes.TwoOptionsProperty;
 }
 export interface IOutputs {
-    Phase?: number;
-    centella_controlphase?: number;
+    phase?: number;
+    controlphase?: number;
     description?: string;
     parentcontactid?: ComponentFramework.LookupValue[];
     proyectoComprometido?: boolean;

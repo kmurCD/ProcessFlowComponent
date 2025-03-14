@@ -1,23 +1,16 @@
 import * as React from "react";
-import "../bodyFlow/bodyFlow.css";
-import { CircleButton } from "../circleButton/circleButton";
-
+import "./BodyFlowProcess.css";
+import { CircleButton } from "../circleButton/CircleButton";
+import { ContextGeneral } from "../../context/ContextGeneral";
 
 interface Props {
   onNewPhase: (value: boolean) => void;
-  phase: number;
-  selectPhase: number;
-  names: string[];
-  onSelect: (value: number) => void;
+  onSelect: (number: number) => void;
 }
 
-const BodyFlow: React.FC<Props> = ({
-  phase,
-  selectPhase,
-  names,
-  onNewPhase,
-  onSelect,
-}) => {
+const BodyFlowProcess: React.FC<Props> = ({ onNewPhase, onSelect }) => {
+  const { names, phase } = React.useContext(ContextGeneral);
+
   return (
     <div className="steps">
       {names.map((name, i) => {
@@ -39,12 +32,9 @@ const BodyFlow: React.FC<Props> = ({
             {/* Logica para la implementación del Boton circular */}
             <div className="circle-progress-container">
               <CircleButton
-                phase={phase}
-                selectPhase={selectPhase}
                 number={number}
                 onSelect={() => onSelect(number)}
                 onNewPhase={onNewPhase}
-                name={name}
               ></CircleButton>
               {!isLast && (
                 <div
@@ -60,5 +50,4 @@ const BodyFlow: React.FC<Props> = ({
   );
 };
 
-export default BodyFlow;
-
+export default BodyFlowProcess;

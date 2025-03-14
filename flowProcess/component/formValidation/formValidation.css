@@ -9,26 +9,17 @@
   padding: 5px;
   max-height: 300px;
   display: flex;
-  flex-direction: column;
-  
 }
-
+.form-validation-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  max-height: 300px;
+}
 .form-phase{
-  
   height: 80%;
 }
-.form-button{
-  margin-top: 5px;
 
-  height: 20%;
- 
-}
-.button-validation-container{
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: space-between;
-}
 .label-form-container {
   height: 40px;
   display: flex;
@@ -41,28 +32,6 @@
   justify-content: start;
   padding-left: 5px;
 }
-.icon-form-validate {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-}
 
-.informattion-button {
-  background-color: #da3b01 !important;
-  transition: all 0.2s ease-in-out;
-  color: white !important;
-}
 
-.informattion-button:active {
-  transform: translateY(0.5px);
-}
 
-.container-flowProcess {
-  position: relative;
-  z-index: 1; /* Asegúrate de que esté por debajo del popover */
-}
-
-.popover {
-  position: absolute;
-  z-index: 10; /* Asegúrate de que el popover tenga un valor más alto */
-}
