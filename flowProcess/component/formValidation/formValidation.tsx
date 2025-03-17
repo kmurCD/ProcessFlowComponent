@@ -16,10 +16,10 @@ const FormValidation: React.FunctionComponent = () => {
             <div key={i} className="form-phase-item">
               <div className="label-form-validation">{item.descripcion}</div>
 
-              {/**!isLast && <span className="span-space"> </span>*/}
               <div className="circle-error">
-                {["", false, null].includes(
-                  typeof item.contenido === "object" &&
+                {["", false, null, undefined].includes(
+                  item.contenido &&
+                    typeof item.contenido === "object" &&
                     item.contenido instanceof Date
                     ? item.contenido.toString()
                     : typeof item.contenido === "number"

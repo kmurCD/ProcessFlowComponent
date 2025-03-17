@@ -9,10 +9,10 @@ export class FlowProcess
 {
   /**========Variables========**/
   private notifyOutputChanged: () => void;
-  phaseCurrent: number ;
-  phaseSelect: number ;
-  newPhase: number ;
-  dataContext: ComponentFramework.Context<IInputs>;
+  phaseCurrent: number;
+  phaseSelect: number;
+  newPhase: number;
+  dataContext: ComponentFramework.Context<IInputs, IOutputs>;
 
   constructor() {
     /**=======Constructor inicializado=======**/
@@ -35,15 +35,19 @@ export class FlowProcess
     this.phaseSelect = value;
     console.log("Phase selected: ", this.phaseSelect);
 
-    
-
     const dataItem = data[value] || [];
 
     dataItem.forEach((item) => {
-      const param = (this.dataContext.parameters as unknown) as Record<string, { raw: number }>;
+      const param = this.dataContext.parameters as unknown as Record<
+        string,
+        { raw: number }
+      >;
       const dataContext = param[`${item.id}`]?.raw ?? null;
-      
-      item.contenido =  dataContext;
+
+      item.contenido = dataContext;
+      if (Array.isArray(item.contenido) && item.contenido.length === 0) {
+        item.contenido = null;
+      }
       console.log("Data:", dataItem);
     });
 
@@ -69,8 +73,6 @@ export class FlowProcess
         console.log("Cannot decrement. Phase value is at its minimum (1).");
       }
     }
-
-    this.notifyOutputChanged();
   }
 
   /**=======Actualiza la fase=======**/

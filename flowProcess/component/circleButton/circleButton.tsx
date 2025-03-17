@@ -18,9 +18,10 @@ import {
 } from "@fluentui/react/lib/Button";
 import "../circleButton/circleButton.css";
 import { useState } from "react";
-import { DialogConfirmation } from "../dialogConfirmation/DialogConfirmation";
-import FormValidation from "../formValidation/FormValidation";
+
 import { ContextGeneral } from "../../context/ContextGeneral";
+import { DialogConfirmation } from "../dialogConfirmation/dialogConfirmation";
+import FormValidation from "../formValidation/formValidation";
 
 interface PropsCircleButton {
   number: number;
