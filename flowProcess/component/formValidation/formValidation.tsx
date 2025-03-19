@@ -7,7 +7,7 @@ import { ContextGeneral } from "../../context/ContextGeneral";
 
 const FormValidation: React.FunctionComponent = () => {
   const { data } = React.useContext(ContextGeneral);
-
+console.log("Data item form: ", data);
   return (
     <div className="form-phase-container">
       <div className="form-phase">

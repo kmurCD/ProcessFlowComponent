@@ -12,6 +12,8 @@ export class FlowProcess
   phaseCurrent: number;
   phaseSelect: number;
   newPhase: number;
+  rolContext: boolean;
+  data: DataItem[];
   dataContext: ComponentFramework.Context<IInputs, IOutputs>;
 
   constructor() {
@@ -30,14 +32,19 @@ export class FlowProcess
     console.log("Phase value: ", this.phaseCurrent);
   }
 
-  /**=======Selecion de fase y retornar el tipo de dato=======**/
-  private onPhaseSelect(value: number): DataItem[] {
+  /**=======Selecion de fase - retornar el contexto de la Fase - validadar si alguno esta vacio =======**/
+  private onPhaseSelect(value: number): {
+    dataItems: DataItem[];
+    validation: boolean;
+  } {
     this.phaseSelect = value;
     console.log("Phase selected: ", this.phaseSelect);
 
     const dataItem = data[value] || [];
 
-    dataItem.forEach((item) => {
+    let validation = true;
+
+    for (const item of dataItem) {
       const param = this.dataContext.parameters as unknown as Record<
         string,
         { raw: number }
@@ -45,15 +52,24 @@ export class FlowProcess
       const dataContext = param[`${item.id}`]?.raw ?? null;
 
       item.contenido = dataContext;
+
       if (Array.isArray(item.contenido) && item.contenido.length === 0) {
         item.contenido = null;
       }
-      console.log("Data:", dataItem);
-    });
+
+      if (
+        item.contenido === null ||
+        item.contenido === undefined ||
+        (typeof item.contenido === "boolean" && item.contenido === false) ||
+        (typeof item.contenido === "string" && item.contenido === "")
+      ) {
+        validation = false;
+        break;
+      }
+    }
 
     this.notifyOutputChanged();
-
-    return dataItem;
+    return { dataItems: dataItem, validation };
   }
 
   /**=======Nueva de fase=======**/
@@ -73,6 +89,24 @@ export class FlowProcess
         console.log("Cannot decrement. Phase value is at its minimum (1).");
       }
     }
+    this.onPhaseSelect(this.newPhase);
+    this.notifyOutputChanged();
+  }
+  /**=======Obtiene la informacion del propietario=======**/
+  private getOwnerInfo(): void {
+    if (this.dataContext.userSettings) {
+      const userSettings = this.dataContext.userSettings.securityRoles;
+      const adminRoleId = "7312df10-8be7-ef11-9342-000d3a5b0e8f";
+
+      const isAdmin = userSettings.some((role) => role === adminRoleId);
+      console.log("¿Es administrador?:", isAdmin);
+
+      if (isAdmin) {
+        this.rolContext = true;
+      }
+    } else {
+      console.error("userSettings is undefined");
+    }
   }
 
   /**=======Actualiza la fase=======**/
@@ -87,12 +121,17 @@ export class FlowProcess
     context: ComponentFramework.Context<IInputs>
   ): React.ReactElement {
     this.dataContext = context;
+    this.getOwnerInfo();
     this.onUpdatePhase(context.parameters.phase.raw ?? 1);
 
     /**=======Renderiza el componente=======**/
     return React.createElement(MainFlowProcess, {
       phase: this.phaseCurrent,
-      onPhaseSelect: (value: number) => this.onPhaseSelect(value),
+      role: this.rolContext,
+      onPhaseSelect: (value: number) => {
+        const { dataItems, validation: isValid } = this.onPhaseSelect(value);
+        return { dataItems, isValid };
+      },
       onNewPhase: (value: boolean) => this.onNewPhase(value),
     });
   }

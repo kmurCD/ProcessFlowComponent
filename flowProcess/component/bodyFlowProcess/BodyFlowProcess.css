@@ -45,7 +45,6 @@
 .text-content {
   display: flex;
   align-items: center;
-  height: 50%;
 }
 /** Espaciador */
 .span-space {
@@ -53,4 +52,3 @@
   width: 100%;
   min-height: 50%;
 }
-

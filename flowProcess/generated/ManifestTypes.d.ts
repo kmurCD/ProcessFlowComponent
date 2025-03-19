@@ -6,6 +6,7 @@
 export interface IInputs {
     phase: ComponentFramework.PropertyTypes.OptionSetProperty;
     controlphase: ComponentFramework.PropertyTypes.WholeNumberProperty;
+    userSettings: ComponentFramework.PropertyTypes.StringProperty;
     description: ComponentFramework.PropertyTypes.StringProperty;
     parentcontactid: ComponentFramework.PropertyTypes.LookupProperty;
     proyectoComprometido: ComponentFramework.PropertyTypes.TwoOptionsProperty;
@@ -49,6 +50,7 @@ export interface IInputs {
 export interface IOutputs {
     phase?: number;
     controlphase?: number;
+    userSettings?: string;
     description?: string;
     parentcontactid?: ComponentFramework.LookupValue[];
     proyectoComprometido?: boolean;

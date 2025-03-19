@@ -1,7 +1,8 @@
 import * as React from "react";
 import "./BodyFlowProcess.css";
-import { CircleButton } from "../circleButton/CircleButton";
+
 import { ContextGeneral } from "../../context/ContextGeneral";
+import { CircleButton } from "../circleButton/CircleButton";
 
 interface Props {
   onNewPhase: (value: boolean) => void;
