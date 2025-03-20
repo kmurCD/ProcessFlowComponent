@@ -26,10 +26,10 @@ export class FlowProcess
     state: ComponentFramework.Dictionary
   ): void {
     this.notifyOutputChanged = notifyOutputChanged;
+    
 
     /**=======Inicializa el valor de la fase=======**/
     this.phaseCurrent = context.parameters.phase.raw ?? 1;
-    console.log("Phase value: ", this.phaseCurrent);
   }
 
   /**=======Selecion de fase - retornar el contexto de la Fase - validadar si alguno esta vacio =======**/
@@ -39,11 +39,10 @@ export class FlowProcess
   } {
     this.phaseSelect = value;
     console.log("Phase selected: ", this.phaseSelect);
-
     const dataItem = data[value] || [];
-
     let validation = true;
 
+    
     for (const item of dataItem) {
       const param = this.dataContext.parameters as unknown as Record<
         string,
@@ -64,20 +63,17 @@ export class FlowProcess
         (typeof item.contenido === "string" && item.contenido === "")
       ) {
         validation = false;
-        break;
       }
     }
-
     this.notifyOutputChanged();
+
     return { dataItems: dataItem, validation };
   }
-
   /**=======Nueva de fase=======**/
   private onNewPhase(value: boolean) {
     if (value == true) {
       if (this.phaseCurrent > 0 && this.phaseCurrent < 14) {
         this.newPhase = this.phaseCurrent + 1;
-        console.log("New phase value: " + this.newPhase);
       } else {
         console.log("Cannot increment. Phase value is at its maximum (14).");
       }
@@ -123,7 +119,6 @@ export class FlowProcess
     this.dataContext = context;
     this.getOwnerInfo();
     this.onUpdatePhase(context.parameters.phase.raw ?? 1);
-
     /**=======Renderiza el componente=======**/
     return React.createElement(MainFlowProcess, {
       phase: this.phaseCurrent,

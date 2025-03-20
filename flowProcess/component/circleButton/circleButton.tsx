@@ -24,14 +24,11 @@ import { ContextGeneral } from "../../context/ContextGeneral";
 import { DialogConfirmation } from "../dialogConfirmation/DialogConfirmation";
 import FormValidation from "../formValidation/FormValidation";
 
-
 interface PropsCircleButton {
   number: number;
-
   onNewPhase: (value: boolean) => void;
   onSelect: (value: number) => void;
 }
-
 export const CircleButton: React.FC<PropsCircleButton> = ({
   number,
   onSelect,
@@ -39,7 +36,6 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
 }) => {
   const { contextSelectPhase, phase, names, role, validation } =
     React.useContext(ContextGeneral);
-    console.log("validation circle: ", validation);
   const [isCalloutVisible, { toggle: toggleIsCalloutVisible }] =
     useBoolean(false);
   const buttonId = useId("callout-button");
@@ -47,7 +43,6 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
 
   const openDialog = () => setIsDialogVisible(true);
   const closeDialog = () => setIsDialogVisible(false);
-  console.log(role);
   return (
     <ThemeProvider theme={FluentTheme}>
       <>
@@ -125,7 +120,10 @@ export const CircleButton: React.FC<PropsCircleButton> = ({
                 <div className="button-next-back">
                   {isCalloutVisible && phase == contextSelectPhase && (
                     <PrimaryButton
-                      className={`${!validation ? "form-button-next-disabled" : "form-button-next"
+                      className={`${
+                        !validation
+                          ? "form-button-next-disabled"
+                          : "form-button-next"
                       }`}
                       onClick={openDialog}
                       disabled={!validation}
