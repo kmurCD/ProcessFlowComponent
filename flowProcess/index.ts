@@ -5,7 +5,7 @@ import { DataItem, DataType } from "./data/DataType";
 import { data } from "./data/DataOportunity";
 
 export class FlowProcess
-  implements ComponentFramework.StandardControl<IInputs, IOutputs>
+  implements ComponentFramework.ReactControl<IInputs, IOutputs>
 {
   /**========Variables========**/
   private notifyOutputChanged: () => void;
@@ -48,9 +48,9 @@ export class FlowProcess
         string,
         { raw: number }
       >;
-      const dataContext = param[`${item.id}`]?.raw ?? null;
+      const data = param[`${item.id}`]?.raw ?? null;
 
-      item.contenido = dataContext;
+      item.contenido = data;
 
       if (Array.isArray(item.contenido) && item.contenido.length === 0) {
         item.contenido = null;

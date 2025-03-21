@@ -20,9 +20,10 @@ import "../circleButton/circleButton.css";
 import { useState } from "react";
 
 import { ContextGeneral } from "../../context/ContextGeneral";
+import FormValidation from "../formValidation/formValidation";
+import { DialogConfirmation } from "../dialogConfirmation/dialogConfirmation";
 
-import { DialogConfirmation } from "../dialogConfirmation/DialogConfirmation";
-import FormValidation from "../formValidation/FormValidation";
+
 
 interface PropsCircleButton {
   number: number;
