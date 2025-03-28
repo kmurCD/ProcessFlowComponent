@@ -20,8 +20,9 @@ import "../circleButton/circleButton.css";
 import { useState } from "react";
 
 import { ContextGeneral } from "../../context/ContextGeneral";
-import FormValidation from "../formValidation/formValidation";
-import { DialogConfirmation } from "../dialogConfirmation/dialogConfirmation";
+import FormValidation from "../formValidation/FormValidation";
+import { DialogConfirmation } from "../dialogConfirmation/DialogConfirmation";
+
 
 
 
