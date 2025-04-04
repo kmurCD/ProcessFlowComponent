@@ -1,0 +1,2 @@
+C:\PFC\TransligraPCF\Solution\obj\Debug\Solution.cdsproj.AssemblyReference.cache
+C:\PFC\TransligraPCF\Solution\obj\Debug\Solution.cdsproj.CoreCompileInputs.cache

@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a837e4a7-01b8-4f82-a475-be9abd67e667}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form shownavigationbar="true" showImage="false" maxWidth="1920" headerdensity="HighWithControls" solutionaction="Modified">
+      <tabs>
+        <tab name="Summary" verticallayout="true" id="{b6a005fd-5964-4427-b39b-6750e1a5fa6f}" IsUserDefined="0" expanded="true" locklevel="0" showlabel="true" ordinalvalue="0">
+          <columns>
+            <column width="34%" id="0" solutionaction="Modified">
+              <sections>
+                <section name="opportunity_information" showlabel="true" showbar="true" id="{5d1cf874-b807-4158-b230-1a13c1db73ad}" columns="1" IsUserDefined="0" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Top" ordinalvalue="0" solutionaction="Modified">
+                  <rows>
+                    <row>
+                      <cell colspan="1" id="{439e0732-3f3a-409d-98ba-83d3251cb64b}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Tema" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{181e7f45-3819-40c3-bdf3-1c892d53f35d}" ordinalvalue="10001">
+                        <labels>
+                          <label description="Contacto" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b0e21400-f671-46d7-a9c3-1a6c61e4ef1c}" showlabel="true" locklevel="0" ordinalvalue="10002">
+                        <labels>
+                          <label description="Importe del presupuesto" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4c69d917-e84e-4c9d-ba14-f7bb5bc0a51f}" ordinalvalue="10003">
+                        <labels>
+                          <label description="Divisa" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7f5a51a0-115c-4f72-a2f3-7d963e7fa664}" showlabel="true" locklevel="0" ordinalvalue="10004">
+                        <labels>
+                          <label description="Período de tiempo de compra" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f9bdae13-ecd5-4eb7-b71f-f14b9619f7c5}" showlabel="true" locklevel="0" ordinalvalue="10005">
+                        <labels>
+                          <label description="Proceso de compra" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c664bce8-b574-9c22-35db-cb4d1a5dcaa2}" showlabel="true" locklevel="0" visible="true" ordinalvalue="10006" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{70945505-2b1f-42fd-9dbf-b678b2c8fa8a}" showlabel="false" colspan="1" rowspan="6" labelid="{ce6b72a6-550b-4dae-b841-4b62636d06c1}" ordinalvalue="10006" solutionaction="Added">
+                        <labels>
+                          <label description="Siguiente" languagecode="3082" />
+                        </labels>
+                        <control id="CadenceWidgetControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" uniqueid="{BFC8C218-98BB-4D12-8212-2E1617CBB772}" isunbound="true">
+                          <parameters />
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{be1e828b-aa2f-497e-a21c-e218f031d4bd}" colspan="1" rowspan="1" ordinalvalue="10007" solutionaction="Added">
+                        <labels>
+                          <label description="Fase de canalización" languagecode="3082" />
+                        </labels>
+                        <control id="stepname" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="stepname" uniqueid="{2F448D26-2D9D-4FF8-B746-3C9FC2A93A58}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Opportunity_details" showlabel="true" showbar="true" id="{f961b0a9-2637-4fd3-a4d7-8e55b5246727}" layout="varwidth" columns="1" celllabelposition="Top" IsUserDefined="0" locklevel="0" labelwidth="130" celllabelalignment="Left" ordinalvalue="1" solutionaction="Removed" />
+                <section name="Notes_pane" showlabel="false" showbar="false" id="{cbe1fe44-90c3-40f3-9307-2e72bdefe443}" layout="varwidth" columns="11" celllabelposition="Top" locklevel="0" labelwidth="115" IsUserDefined="0" ordinalvalue="1" solutionaction="Added">
+                  <labels>
+                    <label description="Panel de notas" languagecode="3082" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell colspan="2" showlabel="false" rowspan="20" auto="false" id="{17a95e0e-476c-43cf-b6e9-c112fa6c25ec}" locklevel="0" ordinalvalue="10000">
+                        <labels>
+                          <label description="" languagecode="3082" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientPostsConfigurationJSON>{"enableUserPost":true}</UClientPostsConfigurationJSON>
+                            <UClientNotesConfigurationJSON>{"alwaysAuthorNotes":true}</UClientNotesConfigurationJSON>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="1" solutionaction="Modified">
+              <sections>
+                <section name="Record_Summary_Widget" showlabel="false" showbar="false" locklevel="0" id="{a0ace316-56bb-da1c-5b44-166dbbd9675c}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" visible="false" ordinalvalue="0" solutionaction="Removed" />
+                <section name="Summary_CadenceWidget" showlabel="false" showbar="false" locklevel="0" id="{90647cab-2b12-415a-b909-ae9c23ec13b2}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{2288eb08-e061-4511-93e6-49740ac03fd7}" ordinalvalue="1" solutionaction="Removed" />
+                <section name="Notes_pane" showlabel="false" showbar="false" id="{cbe1fe44-90c3-40f3-9307-2e72bdefe443}" layout="varwidth" columns="11" celllabelposition="Top" locklevel="0" labelwidth="115" IsUserDefined="0" ordinalvalue="2" solutionaction="Removed" />
+                <section name="_section_440" id="91b0e55c-1be2-45d0-8475-7465149c52f9" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Top" columns="1" labelwidth="115" ordinalvalue="0" solutionaction="Added">
+                  <labels>
+                    <label description="New Section" languagecode="3082" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{403536c2-1552-41e6-9127-32f4676849d4}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="ControlPhase" languagecode="3082" />
+                        </labels>
+                        <control id="centella_controlphase" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="centella_controlphase" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="2" solutionaction="Modified">
+              <sections>
+                <section name="Summary_section_6" showlabel="false" showbar="false" locklevel="0" id="{ea3bb0a6-b9dc-1b0e-5e7d-74a380ee79a3}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" ordinalvalue="0" solutionaction="Removed" />
+                <section name="Social_pane" showlabel="false" showbar="false" locklevel="0" id="{c03918d8-d714-7b95-3083-443db3e303c8}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" ordinalvalue="1" solutionaction="Removed" />
+                <section name="Competitors_Section" showlabel="false" showbar="false" locklevel="0" id="{c1648a81-612d-428a-6073-b6c917e9eeb9}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="2" solutionaction="Removed" />
+                <section name="_section_411" id="475f0681-c508-4f50-bca1-e014c34d18ff" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0" solutionaction="Added">
+                  <labels>
+                    <label description="New Section" languagecode="3082" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e069742c-64fd-4213-a751-4944ec8f0e92}" locklevel="0" colspan="1" rowspan="1" showlabel="false" ordinalvalue="10000">
+                        <labels>
+                          <label description="Fase Oportunidad" languagecode="3082" />
+                        </labels>
+                        <control id="centella_phase" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="centella_phase" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Product_Line_Items" verticallayout="true" id="{79548060-31f7-4646-8c08-0296ecd4113b}" visible="true" expanded="true" IsUserDefined="0" ordinalvalue="1">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="opportunityproducts" showlabel="false" showbar="false" id="{2b1ed7f7-3ebb-42f3-809f-94eba9f94fb2}" height="auto" IsUserDefined="0" layout="varheight" columns="11" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{ba131dc7-aa7c-4d8b-9c94-421ed8a7ddaf}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Lista de precios" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0B8DF861-AE32-4C79-9C4E-2ECAA9F74712}" ordinalvalue="10002">
+                        <labels>
+                          <label description="Ingresos" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="totals" showlabel="false" showbar="false" locklevel="0" id="{736e5dc8-6758-42ee-8e28-812ec6f75abd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="3">
+                  <rows>
+                    <row>
+                      <cell id="{D96BA356-1581-46E0-937C-49033D55E3A2}" ordinalvalue="10006">
+                        <labels>
+                          <label description="Importe total" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="QUOTES" verticallayout="true" id="{af8380da-5492-4a69-8a36-b1beff121e95}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" ordinalvalue="2">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="opportunityquotes" showlabel="false" showbar="false" id="{40e2e47e-716a-4fe8-9fc0-e0341303c7a3}" height="auto" IsUserDefined="0" layout="varheight" columns="11" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell colspan="2" rowspan="4" showlabel="false" auto="true" id="{dcb63b8d-f689-44b1-a009-292bff328340}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Tarjetas de acción" languagecode="3082" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{ee909091-5a89-403e-bf82-f34512080f08}" celllabelposition="Top" columns="1111" labelwidth="115">
+        <rows>
+          <row>
+            <cell id="{2b3d423b-0b02-e8e1-8a0d-76c19978665d}" showlabel="true" locklevel="0" ordinalvalue="10000">
+              <labels>
+                <label description="Cuenta" languagecode="3082" solutionaction="Added" />
+              </labels>
+            </cell>
+            <cell id="{e8813fe3-3ad9-4afd-94c2-52e8d1627a59}" ordinalvalue="20001">
+              <labels>
+                <label description="Fecha estimada de cierre" languagecode="3082" solutionaction="Added" />
+              </labels>
+            </cell>
+            <cell id="{4343680f-7e56-4968-90fe-814e52f6e2a7}" ordinalvalue="30002">
+              <labels>
+                <label description="Ingresos estimados" languagecode="3082" solutionaction="Added" />
+              </labels>
+            </cell>
+            <cell id="{d9002ebe-3d57-445d-8fb7-459cfb40f437}" ordinalvalue="40003">
+              <labels>
+                <label description="Owner" languagecode="3082" solutionaction="Added" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <events>
+        <event name="onchange" application="false" active="false" attribute="purchasetimeframe" solutionaction="Added">
+          <Handlers>
+            <Handler functionName="cambiarColorEstado" libraryName="centella_OportunidadScript" handlerUniqueId="{140e552f-42b9-4297-aea8-1fb6496fcfbf}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+          </Handlers>
+        </event>
+      </events>
+      <controlDescriptions>
+        <controlDescription forControl="{3FF9A528-DD50-4ACA-8F10-2E5ED73513AD}" solutionaction="Removed" />
+        <controlDescription forControl="{36D5BB4F-04A4-4885-86A7-2E60EBCC03F2}" solutionaction="Removed" />
+        <controlDescription forControl="{74D56A28-6093-4345-8F1D-B1BCE70AA0A0}" solutionaction="Removed" />
+        <controlDescription forControl="{89cdfa42-12d4-4c8b-8a0d-009ce7e0332d}" solutionaction="Removed" />
+        <controlDescription forControl="{89cdfa42-12d4-4c8b-8a0d-009ce7e0332e}" solutionaction="Removed" />
+        <controlDescription forControl="{7C89C628-894E-A7C8-561A-12EB5889BA4D}" solutionaction="Removed" />
+        <controlDescription forControl="{2F448D26-2D9D-4FF8-B746-3C9FC2A93A58}" solutionaction="Added">
+          <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>stepname</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>stepname</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="PowerAppsModernization.Auditing.AuditDetails">
+            <parameters>
+              <sampleProperty type="SingleLine.Text">stepname</sampleProperty>
+              <auditRecordId type="SingleLine.Text">opportunityid</auditRecordId>
+              <entityTypeName type="SingleLine.Text">opportunityid</entityTypeName>
+              <primaryEntityName type="SingleLine.Text">opportunityid</primaryEntityName>
+              <primaryEntityId type="SingleLine.Text">opportunityid</primaryEntityId>
+              <deleteLogTimeStamp type="SingleLine.Text">opportunityid</deleteLogTimeStamp>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="PowerAppsModernization.Auditing.AuditDetails">
+            <parameters>
+              <sampleProperty type="SingleLine.Text">stepname</sampleProperty>
+              <auditRecordId type="SingleLine.Text">opportunityid</auditRecordId>
+              <entityTypeName type="SingleLine.Text">opportunityid</entityTypeName>
+              <primaryEntityName type="SingleLine.Text">opportunityid</primaryEntityName>
+              <primaryEntityId type="SingleLine.Text">opportunityid</primaryEntityId>
+              <deleteLogTimeStamp type="SingleLine.Text">opportunityid</deleteLogTimeStamp>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="PowerAppsModernization.Auditing.AuditDetails">
+            <parameters>
+              <sampleProperty type="SingleLine.Text">stepname</sampleProperty>
+              <auditRecordId type="SingleLine.Text">opportunityid</auditRecordId>
+              <entityTypeName type="SingleLine.Text">opportunityid</entityTypeName>
+              <primaryEntityName type="SingleLine.Text">opportunityid</primaryEntityName>
+              <primaryEntityId type="SingleLine.Text">opportunityid</primaryEntityId>
+              <deleteLogTimeStamp type="SingleLine.Text">opportunityid</deleteLogTimeStamp>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="centella_OportunidadScript" libraryUniqueId="{4c76117f-5d1f-4331-98fe-6f8e101dd10b}" solutionaction="Added" />
+      </formLibraries>
+      <footer id="{d9a2417f-9d62-454c-91af-acf99e87750b}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows></rows>
+      </footer>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Oportunidad" languagecode="3082" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Formulario predeterminado de oportunidad actualizado" languagecode="3082" />
+    </Descriptions>
+  </systemform>
+</forms>

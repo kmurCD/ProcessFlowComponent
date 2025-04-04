@@ -1,0 +1,136 @@
+.circle-container {
+  width: 40px;
+  height: 40px;
+  padding: 0px;
+  min-width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #115ea3;
+}
+.circle-container:hover {
+  background-color: #707070;
+  color: white;
+  border: solid 0.5px #494949;
+}
+/** Estado actual */
+.circle-container-1 {
+  border: 0.5px solid rgb(109, 109, 109);
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+/** Estado menor que el actual */
+.circle-container-2 {
+  border: none;
+  background-color: #115ea3;
+  color: rgb(255, 255, 255);
+}
+/** Contenido dentro del círculo */
+.circle-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-icon {
+  display: flex;
+  align-items: center;
+}
+/** Círculo seleccionado */
+.circle-select {
+  color: rgb(255, 255, 255);
+  background-color: #707070;
+}
+/** Círculo activo */
+.circle-active {
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #da3b01;
+}
+
+.form-val-container {
+  display: flex;
+  justify-content: center;
+}
+
+/** Botones */
+
+.callout-container {
+  min-width: 300px;
+  max-width: 350px;
+  max-height: 600px;
+  padding: 14px 14px;
+}
+
+.container-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 10px;
+  max-width: 300px;
+  max-height: 50px;
+}
+
+.space {
+  display: flex;
+  width: 25%;
+  height: 100%;
+}
+
+.button-next-back {
+  min-width: 75%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.form-button-next {
+  background-color: red;
+  border: black;
+  margin-right: 5px;
+}
+
+.form-button-next:hover {
+  background-color: #adadad;
+  color: black;
+  border: black;
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  max-height: 50px;
+  padding: 0px 5px;
+}
+
+.title-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 80%;
+  height: 50px;
+  padding-left: 5px;
+  color: #115ea3;
+}
+.icon-close {
+  display: flex;
+  width: 20%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.iconButton {
+  width: 20px;
+  height: 20px;
+  color: rgb(0, 0, 0);
+}
+.iconButton:hover {
+  background: #707070;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+.form-button-next-disabled {
+  background-color: #adadad;
+  color: rgb(201, 201, 201);
+}

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b81139b0-9849-4def-836b-75c4a0f0b03a}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="general" verticallayout="true" id="{362e76e8-ab8e-4e50-a965-5a7b3939bd20}" IsUserDefined="0" ordinalvalue="1" solutionaction="Modified">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="competitor information" showlabel="false" showbar="false" id="{3b999ae9-3d9b-4952-80c3-7a31b16c6485}" IsUserDefined="0" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{e0a54f5a-9f5b-4a90-a810-399f272b6bdf}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Nombre" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                      <cell id="{6799c1aa-5d70-4288-9dcc-0cce6752b2ff}" ordinalvalue="20001">
+                        <labels>
+                          <label description="Sitio web" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25d40393-4817-4292-bcb1-9faa5c8e838e}" ordinalvalue="20003">
+                        <labels>
+                          <label description="Divisa" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e9d86161-90a2-4f6a-bc2c-c59a7b790cfa}" ordinalvalue="10004">
+                        <labels>
+                          <label description="Producto principal" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                      <cell id="{f825e593-b475-4e9b-8bab-380bd8422025}" ordinalvalue="20005">
+                        <labels>
+                          <label description="Ingresos notificados" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="address" showlabel="true" showbar="true" id="{e6352e80-b869-47af-9cea-f533265369a0}" IsUserDefined="0" ordinalvalue="1">
+                  <rows>
+                    <row>
+                      <cell id="{fc460836-8bd8-45af-a18e-71790cf12989}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Calle 1" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                      <cell id="{15e4edb1-c1c2-4001-8e51-65cd7dc89f9f}" ordinalvalue="20001">
+                        <labels>
+                          <label description="Estado o provincia" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d745069e-efe8-4569-b93d-7305ca5f61eb}" ordinalvalue="10002">
+                        <labels>
+                          <label description="Calle 2" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                      <cell id="{a2459a56-ab15-4523-a2bb-65f9ca970c79}" ordinalvalue="20003">
+                        <labels>
+                          <label description="Código postal" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{674af286-e980-481a-ae61-76a11b0fc1a3}" ordinalvalue="10004">
+                        <labels>
+                          <label description="Calle 3" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                      <cell id="{82df8cb5-2b9e-494a-b481-a931e4d0790b}" ordinalvalue="20005">
+                        <labels>
+                          <label description="País o región" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{04c70aa1-c5bb-4959-920f-8e2bcf0e03ba}" ordinalvalue="10006">
+                        <labels>
+                          <label description="Ciudad" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="analysis" id="{42dbc80a-3d75-4f0e-bd90-e9817ca2eaf9}" IsUserDefined="0" ordinalvalue="2" solutionaction="Modified">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="analysis" showlabel="false" showbar="false" id="{f9e5ce1c-b14f-4e97-9a82-2d1b9604bb85}" IsUserDefined="0" height="auto" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell colspan="2" rowspan="4" id="{12a7afa8-3d14-48f1-9d1e-9ee908fd3aaa}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Información general" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="2" rowspan="4" id="{66e57781-8679-4275-86c2-65ca09b92d00}" ordinalvalue="10001">
+                        <labels>
+                          <label description="Punto fuerte" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="2" rowspan="4" id="{f62850cb-d508-4925-894c-7fc43bd10c80}" ordinalvalue="10002">
+                        <labels>
+                          <label description="Punto débil" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="2" rowspan="4" id="{c383dac3-b808-467d-b65f-77885883e9ce}" ordinalvalue="10003">
+                        <labels>
+                          <label description="Oportunidad" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="2" rowspan="5" auto="true" id="{ff884108-3239-4183-99ca-e6129157b2cf}" ordinalvalue="10004">
+                        <labels>
+                          <label description="Amenaza" languagecode="3082" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="notes" id="{110C619E-4C6F-469c-A148-7C6F2E8284D8}" IsUserDefined="0" expanded="false" ordinalvalue="3" solutionaction="Modified" />
+        <tab name="tab_recordwall" id="{e94e6ac4-12db-bc8c-ec81-8b20c5987655}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="false" labelid="{c58dd5d6-e4c7-4c35-8754-fd5e7474beb3}" ordinalvalue="0" solutionaction="Added">
+          <labels>
+            <label description="Novedades" languagecode="3082" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_recordwall_section_1" showlabel="false" showbar="false" locklevel="0" id="{ac0addcc-a626-6c98-40ee-b11edac36204}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{702e00d2-e600-43f3-9678-7a720a5fbf68}" ordinalvalue="0">
+                  <labels>
+                    <label description="" languagecode="3082" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{be13b312-b6ac-83d7-34e1-e90dc1ecbec7}" showlabel="false" colspan="1" auto="false" rowspan="15" labelid="{b3b60834-3e41-43eb-8916-98e5264229c8}" ordinalvalue="10000">
+                        <labels>
+                          <label description="" languagecode="3082" />
+                        </labels>
+                        <control id="WebResource_RecordWall" classid="{9FDF5F91-88B1-47f4-AD53-C11EFC01A01D}">
+                          <parameters>
+                            <Url>msdyn_/RecordWall.htm</Url>
+                            <PassParameters>true</PassParameters>
+                            <Security>false</Security>
+                            <Scrolling>auto</Scrolling>
+                            <Border>false</Border>
+                          </parameters>
+                        </control>
+                        <events>
+                          <event name="onload" application="0">
+                            <dependencies />
+                          </event>
+                        </events>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+          <events>
+            <event name="tabstatechange" application="false" active="false">
+              <Handlers>
+                <Handler functionName="ActivityFeeds.Form.CustomizationUtils.updateRecordWallRenderingState" libraryName="msdyn_/ActivityFeeds.Form.js" handlerUniqueId="{9beb6ce6-2666-8033-a406-3d68d44b9592}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+              </Handlers>
+            </event>
+          </events>
+        </tab>
+      </tabs>
+      <formLibraries solutionaction="Added">
+        <Library name="msdyn_/ActivityFeeds.Form.js" libraryUniqueId="{4181da4c-6d13-ba3c-c859-be404e4ee2e3}" />
+      </formLibraries>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Información" languagecode="3082" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Formulario para esta entidad." languagecode="3082" />
+    </Descriptions>
+  </systemform>
+</forms>

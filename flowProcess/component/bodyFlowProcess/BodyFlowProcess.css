@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/** Pasos */
+.steps {
+  width: 100%;
+  max-height: 900px;
+}
+/** Contenedor general */
+.flow-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+/*! CIRCULO */
+/** Contenedor de los círculos y barra vertical */
+.circle-progress-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*! BARRA DE PROGRESO */
+.progress-before {
+  width: 5px;
+  height: 20px;
+  background-color: #115ea3;
+}
+.progress-after {
+  width: 5px;
+  height: 20px;
+  background-color: #adadad;
+}
+/*! TEXTO */
+/** Contenedor del texto */
+.text-container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 100%;
+  font-size: 14px;
+  list-style: none;
+}
+.text-content {
+  display: flex;
+  align-items: center;
+}
+/** Espaciador */
+.span-space {
+  display: flex;
+  width: 100%;
+  min-height: 50%;
+}

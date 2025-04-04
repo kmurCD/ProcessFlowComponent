@@ -1,0 +1,1084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.25013.202" SolutionPackageVersion="9.2" languagecode="3082" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25013.202" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25014.00220">
+  <SolutionManifest>
+    <UniqueName>TransligraCRM</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="TransligraCRM" languagecode="3082" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.1</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>JosueManuel</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="JosueCentella " languagecode="3082" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>centella</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>59420</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="1" />
+      <RootComponent type="1" schemaName="competitor" behavior="0" />
+      <RootComponent type="1" schemaName="opportunity" behavior="1" />
+      <RootComponent type="29" id="{5e3d65e2-5ff4-ef11-9342-000d3a5986e6}" behavior="0" />
+      <RootComponent type="61" schemaName="centella_OportunidadScript" behavior="0" />
+      <RootComponent type="61" schemaName="centella_ScriptAcount" behavior="0" />
+      <RootComponent type="62" schemaName="SalesHubSitemap" behavior="0" />
+      <RootComponent type="80" schemaName="msdynce_saleshub" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="adminsettingsentity" displayName="admin_settings_entity" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="bulkoperation" displayName="Campaña exprés" solution="msdynce_Marketing (9.0.4.37)">
+          <package appName="msdynce_Marketing" version="9.0.25014.10001">msdynce_MarketingAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="campaign" displayName="Campaña" solution="msdynce_Marketing (9.0.4.37)">
+          <package appName="msdynce_Marketing" version="9.0.25014.10001">msdynce_MarketingAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="1" schemaName="competitor" displayName="Competidor" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores sigo" displayName="Competidores sigo" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083692}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores en seguimiento" displayName="Competidores en seguimiento" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083693}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="competitor" displayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="discounttype" displayName="Lista de descuentos" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="dynamicpropertyoptionsetitem" displayName="Elemento del conjunto de opciones de la propiedad" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="entitlement" displayName="Derecho" solution="msdynce_Service (9.0.5.56)">
+          <package appName="msdynce_Service" version="9.0.24124.1010">msdynce_ServiceAnchor (9.0.24124.1010)</package>
+          <package appName="Dynamics 365 Core Service" version="9.0.25033.3000">msdynce_ServiceAnchor (9.0.25033.3000)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="incident" displayName="Caso" solution="msdynce_Service (9.0.5.56)">
+          <package appName="msdynce_Service" version="9.0.24124.1010">msdynce_ServiceAnchor (9.0.24124.1010)</package>
+          <package appName="Dynamics 365 Core Service" version="9.0.25033.3000">msdynce_ServiceAnchor (9.0.25033.3000)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="incidentresolution" displayName="Resolución del caso" solution="msdynce_Service (9.0.5.56)">
+          <package appName="msdynce_Service" version="9.0.24124.1010">msdynce_ServiceAnchor (9.0.24124.1010)</package>
+          <package appName="Dynamics 365 Core Service" version="9.0.25033.3000">msdynce_ServiceAnchor (9.0.25033.3000)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="invoice" displayName="Factura" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="invoice" displayName="Factura" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="invoicedetail" displayName="Producto de la factura" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="lead" displayName="Cliente potencial" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package appName="msdynce_LeadManagement" version="9.0.24114.10001">msdynce_LeadManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="leadtoopportunitysalesprocess" displayName="Proceso de venta de cliente potencial a oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="list" displayName="Lista de marketing" solution="msdynce_Marketing (9.0.4.37)">
+          <package appName="msdynce_Marketing" version="9.0.25014.10001">msdynce_MarketingAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_callablecontext" displayName="Contexto disponible del cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_channelinstance" displayName="Instancia de canal" solution="msdyn_D365ChannelDefinitions (1.0.1.3)">
+          <package appName="App profile manager" version="10.1.25013.1012">msdyn_AppProfileManagerAnchor (10.1.25013.1012)</package>
+          <package appName="D365ChannelDefinitionsPackage" version="1.0.1.4">msdyn_D365ChannelDefinitionsAnchor (1.0.1.4)</package>
+          <package appName="CxpSales" version="1.1.40197.75">DynamicsMKT_CxpSalesAnchorSolution (1.1.40197.75)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_datahygienesettinginfo" displayName="Información de configuración de depuración de datos" solution="msdyn_leadhygiene (9.1.2501.4001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_extendedusersetting" displayName="Configuración de usuario extendida" solution="msdyn_acceleratedsales (9.1.25014.10001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_forecastconfiguration" displayName="Configuración de previsión" solution="msdyn_Forecasting (9.0.24111.10004)">
+          <package appName="msdyn_SalesIntegrationsAndAddOns" version="9.0.24114.10001">msdyn_SalesIntegrationsAddOns (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_leadhygienesetting" displayName="Configuración de Protección de clientes potenciales" solution="msdyn_leadhygiene (9.1.2501.4001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_ocliveworkitem" displayName="Conversación" solution="OmnichannelBase (1.10.0.84)">
+          <package appName="UnifiedRoutingPrime" version="1.5.26.169">UnifiedRoutingPrimeAnchor (1.5.26.169)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_playbookactivity" displayName="Actividad del cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_playbookactivityattribute" displayName="Atributo de actividad del cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_playbookcategory" displayName="[EN DESUSO] Categoría del cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_playbookinstance" displayName="Cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_playbooktemplate" displayName="[EN DESUSO] Plantilla del cuaderno de estrategias" solution="msdyn_Playbook (9.0.2404.3002 )">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_salescopilotorgsettings" displayName="Configuración de nivel de organización para las aplicaciones Sales Copilot" solution="msdyn_SalesCopilot (9.1.24114.10002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_salesocsmstemplate" displayName="Plantilla de mensaje de texto" solution="msdyn_SalesOmniChannel (9.1.25014.10001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="1" schemaName="opportunity" displayName="Oportunidad" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunityclose" displayName="Cierre de oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunityproduct" displayName="Producto de oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunityproduct" displayName="Producto de oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunitysalesprocess" displayName="Proceso de ventas de la oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="phonetocaseprocess" displayName="Proceso de teléfono a caso" solution="msdynce_Service (9.0.5.56)">
+          <package appName="msdynce_Service" version="9.0.24124.1010">msdynce_ServiceAnchor (9.0.24124.1010)</package>
+          <package appName="Dynamics 365 Core Service" version="9.0.25033.3000">msdynce_ServiceAnchor (9.0.25033.3000)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="pricelevel" displayName="Lista de precios" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="product" displayName="Producto" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="product" displayName="Producto" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="productpricelevel" displayName="Elemento de lista de precios" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="productsubstitute" displayName="Relación de producto" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quote" displayName="Oferta" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quote" displayName="Oferta" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quote" displayName="Oferta" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="quotedetail" displayName="Producto de oferta" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="salesliterature" displayName="Documentación de ventas" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="salesorder" displayName="Pedido" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="salesorder" displayName="Pedido" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="salesorderdetail" displayName="Producto del pedido" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="territory" displayName="Zona de ventas" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="territory" displayName="Zona de ventas" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="uom" displayName="Unidad" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="uomschedule" displayName="Unidad de venta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="uomschedule" displayName="Unidad de venta" solution="msdynce_ProductManagement (9.0.4.0066)">
+          <package appName="msdynce_ProductManagement" version="9.0.24114.10001">msdynce_ProductManagementAnchor (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_city" displayName="Ciudad" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_country" displayName="País o región" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line1" displayName="Calle 1" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line2" displayName="Calle 2" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_line3" displayName="Calle 3" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_postalcode" displayName="Código postal" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="address1_stateorprovince" displayName="Estado o provincia" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="budgetamount" displayName="Importe del presupuesto" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="competitorid" displayName="Competidor " parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores sigo" displayName="Competidores sigo" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083692}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="competitorid" displayName="Competidor " parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores en seguimiento" displayName="Competidores en seguimiento" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083693}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountamount" displayName="Importe de descuento de oportunidad" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="discountpercentage" displayName="Descuento de oportunidad (%)" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedclosedate" displayName="Fecha estimada de cierre" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="estimatedvalue" displayName="Ingresos estimados" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="freightamount" displayName="Importe de flete" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="isrevenuesystemcalculated" displayName="Ingresos" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="keyproduct" displayName="Producto principal" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Nombre" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores sigo" displayName="Competidores sigo" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083692}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Nombre" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores en seguimiento" displayName="Competidores en seguimiento" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083693}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Nombre" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Tema" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="29" displayName="Nueva regla de negocio" id="{5e3d65e2-5ff4-ef11-9342-000d3a5986e6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="name" displayName="Tema" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunities" displayName="Oportunidad" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="Oportunidad" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="29" displayName="Nueva regla de negocio" id="{5e3d65e2-5ff4-ef11-9342-000d3a5986e6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="opportunityid" displayName="Oportunidad" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="overview" displayName="Información general" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentaccountid" displayName="Cuenta" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentbundleidref" displayName="Producto de agrupación primaria" parentSchemaName="opportunityproduct" parentDisplayName="Producto de oportunidad" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="parentcontactid" displayName="Contacto" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="pricelevelid" displayName="Lista de precios" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchaseprocess" displayName="Proceso de compra" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchasetimeframe" displayName="Período de tiempo de compra" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="29" displayName="Nueva regla de negocio" id="{5e3d65e2-5ff4-ef11-9342-000d3a5986e6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="purchasetimeframe" displayName="Período de tiempo de compra" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="reportedrevenue" displayName="Ingresos notificados" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="stepname" displayName="Fase de canalización" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="stockexchange" displayName="Mercado de valores" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="strengths" displayName="Punto fuerte" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="threats" displayName="Amenaza" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamount" displayName="Importe total" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totalamountlessfreight" displayName="Importe sin flete total" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totallineitemamount" displayName="Importe detallado total" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="totaltax" displayName="Impuesto total" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="Divisa" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="Divisa" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="29" displayName="Nueva regla de negocio" id="{5e3d65e2-5ff4-ef11-9342-000d3a5986e6}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="transactioncurrencyid" displayName="Divisa" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="weaknesses" displayName="Punto débil" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="websiteurl" displayName="Sitio web" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores sigo" displayName="Competidores sigo" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083692}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="websiteurl" displayName="Sitio web" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="26" schemaName="Competidores en seguimiento" displayName="Competidores en seguimiento" parentSchemaName="competitor" parentDisplayName="Competidor" id="{03d46203-3074-4793-b857-5803e7083693}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="websiteurl" displayName="Sitio web" parentSchemaName="competitor" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Campañas de clientes potenciales excluidos" displayName="Campañas de clientes potenciales excluidos" parentSchemaName="lead" parentDisplayName="Cliente potencial" solution="msdynce_MarketingPatch (9.0.1904.1019)" id="{7c17132b-cda1-497a-b4c2-50da36bc0d4a}">
+          <package appName="msdynce_Marketing" version="9.0.25014.10001">msdynce_MarketingAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Mis mensajes de texto" displayName="Mis mensajes de texto" parentSchemaName="msdyn_ocliveworkitem" parentDisplayName="Conversación" solution="msdyn_SalesOmniChannel (9.1.25014.10001)" id="{b7a71b36-1a4a-fe22-bba2-111d3a98dd1f}">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Mis mensajes de texto no leídos" displayName="Mis mensajes de texto no leídos" parentSchemaName="msdyn_ocliveworkitem" parentDisplayName="Conversación" solution="msdyn_SalesOmniChannel (9.1.25014.10001)" id="{c8b82c47-9a9a-22fe-2abb-d1114b09aa2c}">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Mis oportunidades abiertas" displayName="Mis oportunidades abiertas" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{00000000-0000-0000-00aa-000010003000}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Ofertas de oportunidad" displayName="Ofertas de oportunidad" parentSchemaName="quote" parentDisplayName="Oferta" solution="msdynce_Sales (9.0.4.0076)" id="{61a4c932-d775-e211-b420-00155d806600}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Oportunidades recientes" displayName="Oportunidades recientes" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{9c3f7ee8-eca7-e211-9fb6-00155dd0ea05}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Todas las cuentas" displayName="Todas las cuentas" parentSchemaName="account" parentDisplayName="Cuenta" solution="msdynce_AppCommon (9.0.4.0066)" id="{65ffaf9a-e8c5-432d-860b-32f841b00d87}">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Todas las oportunidades" displayName="Todas las oportunidades" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{c6f6fc1b-1b3e-e711-80e1-00155d871bb4}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Todos los contactos" displayName="Todos los contactos" parentSchemaName="contact" parentDisplayName="Contacto" solution="msdynce_AppCommon (9.0.4.0066)" id="{0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105}">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Todos los mensajes de texto" displayName="Todos los mensajes de texto" parentSchemaName="msdyn_ocliveworkitem" parentDisplayName="Conversación" solution="msdyn_SalesOmniChannel (9.1.25014.10001)" id="{a6960a25-1a4a-ed11-bba2-000d3a98dd1f}">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Vista de edición alineada de productos de la oportunidad: productos de agrupación" displayName="Vista de edición alineada de productos de la oportunidad: productos de agrupación" parentSchemaName="opportunityproduct" parentDisplayName="Producto de oportunidad" solution="msdynce_SalesPatch (9.0.1904.3002)" id="{e175dfbf-8eae-4af2-9dd2-68c43c14d40f}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Vista de edición alineada de productos de oportunidad" displayName="Vista de edición alineada de productos de oportunidad" parentSchemaName="opportunityproduct" parentDisplayName="Producto de oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{01010de7-749e-4fe6-8037-aca560a4fcbe}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="29" displayName="Proceso de venta" solution="msdynce_Sales (9.0.4.0076)" id="{3e8ebee6-a2bc-4451-9c5f-b146b085413a}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Clientes principales" displayName="Clientes principales" parentSchemaName="opportunity" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{8bc5fb18-48f2-4782-9e16-3d452fa4ddce}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Panel de rendimiento de ventas" solution="msdynce_Sales (9.0.4.0076)" id="{25b754f5-7563-df11-ae90-00155d2e3002}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Panel social de actividad de ventas" solution="msdynce_Sales (9.0.4.0076)" id="{2701de60-8f2a-48a4-8262-4a35ca7441fa}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="tarjeta de contacto de cuenta" parentDisplayName="Contacto" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Panel de actividad de ventas" solution="msdynce_Sales (9.0.4.0076)" id="{45f88f83-0e67-443b-bd05-81d49719f6b1}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Cuenta" parentDisplayName="Cuenta" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
+          <package appName="msdynce_AppCommon" version="9.0.25014.10001">msdynce_AppCommonAnchor (9.0.25014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" solution="msdynce_Sales (9.0.4.0076)" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Información" parentDisplayName="Competidor" solution="msdynce_Sales (9.0.4.0076)" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Panel de ventas" solution="msdynce_Sales (9.0.4.0076)" id="{d1f511a8-1ead-e211-bb72-00155da9a201}">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Forecasting/Images/msdyn_ForecastDefinitionEntityIcon.svg" displayName="Forecasting/Images/msdyn_ForecastDefinitionEntityIcon.svg" solution="msdyn_Forecasting (9.0.24111.10004)">
+          <package appName="msdyn_SalesIntegrationsAndAddOns" version="9.0.24114.10001">msdyn_SalesIntegrationsAddOns (9.0.24114.10001)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Account/AssetCommon.Account.Library.js" displayName="msdyn_/Account/AssetCommon.Account.Library.js" solution="msdyn_AssetCommon (1.0.50.1)">
+          <package appName="msdynce_Service" version="9.0.24124.1010">msdynce_ServiceAnchor (9.0.24124.1010)</package>
+          <package appName="Dynamics 365 Core Service" version="9.0.25033.3000">msdynce_ServiceAnchor (9.0.25033.3000)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/ActivityFeeds.Form.js" displayName="msdyn_/ActivityFeeds.Form.js" solution="ActivityFeedsCore (9.0.0.0011)">
+          <package appName="ActivityFeedsCore" version="9.0.0.0011">ActivityFeedsCore (9.0.0.0011)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/Area_Default_Icon.png" displayName="msdyn_/Images/Area_Default_Icon.png" solution="AppModuleWebResources (2.5)">
+          <package appName="AppModule Web Resources Package" version="2.5">AppModuleWebResources (2.5)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RecordWall.htm" displayName="msdyn_/RecordWall.htm" solution="ActivityFeedsCore (9.0.0.0011)">
+          <package appName="ActivityFeedsCore" version="9.0.0.0011">ActivityFeedsCore (9.0.0.0011)</package>
+        </Required>
+        <Dependent type="60" displayName="Información" parentDisplayName="Competidor" id="{b81139b0-9849-4def-836b-75c4a0f0b03a}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_Dynamics_icons_Sales" displayName="msdyn_Dynamics_icons_Sales" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_SalesCopilot/CopilotSummaryWidget.Library.js" displayName="msdyn_SalesCopilot/CopilotSummaryWidget.Library.js" solution="msdyn_SalesCopilot (9.1.24114.10002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" displayName="msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" solution="msdyn_SalesOmniChannel (9.1.25014.10001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/goalmanagement/RollupQuery.svg" displayName="Sales/_imgs/goalmanagement/RollupQuery.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/partnerapps/PartnerApps.svg" displayName="Sales/_imgs/partnerapps/PartnerApps.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/DiscountLists.svg" displayName="Sales/_imgs/productgrid/DiscountLists.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/GoalMetrics.svg" displayName="Sales/_imgs/productgrid/GoalMetrics.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/GoalSettings.svg" displayName="Sales/_imgs/productgrid/GoalSettings.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/PriceLists.svg" displayName="Sales/_imgs/productgrid/PriceLists.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/productCatalogSettings.svg" displayName="Sales/_imgs/productgrid/productCatalogSettings.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/SalesTerritories.svg" displayName="Sales/_imgs/productgrid/SalesTerritories.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/productgrid/UnitGroups.svg" displayName="Sales/_imgs/productgrid/UnitGroups.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsAnalyticsIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsAnalyticsIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsChatCollabIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsChatCollabIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsLinkedInIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsLinkedInIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsLnOIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsLnOIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsOverviewIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsOverviewIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsProductivityToolsIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsProductivityToolsIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/GsTeamsCallsIcon.svg" displayName="Sales/_imgs/saleAdminSetting/GsTeamsCallsIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/InsightIcon.svg" displayName="Sales/_imgs/saleAdminSetting/InsightIcon.svg" solution="msdynce_SalesPatch202001 (9.0.24114.10003)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/saleAdminSetting/SettingsIcon.svg" displayName="Sales/_imgs/saleAdminSetting/SettingsIcon.svg" solution="msdynce_SalesPatch (9.0.1904.3002)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/SiteMap/OpportunityPipelineView.svg" displayName="Sales/_imgs/SiteMap/OpportunityPipelineView.svg" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/SiteMap/OrgChartIcon.svg" displayName="Sales/_imgs/SiteMap/OrgChartIcon.svg" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/_imgs/SiteMap/SalesCopilotIconBlack.svg" displayName="Sales/_imgs/SiteMap/SalesCopilotIconBlack.svg" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="Sales/ClientCommon/Sales_ClientCommon.js" displayName="Sales/ClientCommon/Sales_ClientCommon.js" solution="msdynce_Sales (9.0.4.0076)">
+          <package appName="msdynce_Sales" version="9.0.24114.10003">msdynce_SalesAnchor (9.0.24114.10003)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="62" schemaName="SalesHubSitemap" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="62" schemaName="SalesHubSitemap" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.AcceleratedSales.CadenceWidgetControl" displayName="MscrmControls.AcceleratedSales.CadenceWidgetControl" solution="msdyn_acceleratedsales (9.1.25014.10001)">
+          <package appName="msdyn_AcceleratedSales" version="9.1.25014.10001">msdyn_AcceleratedSalesAnchor (9.1.25014.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2501.3011)">
+          <package appName="Base Custom Controls" version="9.0.2501.3011">BaseCustomControlsCore (9.0.2501.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Cuenta" parentDisplayName="Cuenta" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.Grid.GridControl" displayName="MscrmControls.Grid.GridControl" solution="BaseCustomControlsCore (9.0.2501.3011)">
+          <package appName="Base Custom Controls" version="9.0.2501.3011">BaseCustomControlsCore (9.0.2501.3011)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="PowerAppsModernization.Auditing.AuditDetails" displayName="PowerAppsModernization.Auditing.AuditDetails" solution="msft_Auditing (1.0.0.0)">
+          <package appName="PowerAppsModernization Package" version="1.0.0.0">PowerAppsModernization_Anchor (1.0.0.0)</package>
+        </Required>
+        <Dependent type="60" displayName="Oportunidad" parentDisplayName="Oportunidad" id="{a837e4a7-01b8-4f82-a475-be9abd67e667}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" solution="msdyn_SalesApp (9.0.25014.10001)">
+          <package appName="msdynce_SalesInsights" version="9.0.25014.10006">msdynce_SalesInsightsAnchor (9.0.25014.10006)</package>
+        </Required>
+        <Dependent type="80" schemaName="msdynce_saleshub" displayName="Transligra-CRM" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

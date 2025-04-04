@@ -2,12 +2,9 @@
 
 # dependencies
 /node_modules
-# generated directory
-**/generated
-solution/
 # output directory
 /out
-
+/solution
 # msbuild output directories
 /bin
 /obj
