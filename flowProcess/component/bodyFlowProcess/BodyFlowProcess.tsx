@@ -4,7 +4,6 @@ import "./BodyFlowProcess.css";
 import { ContextGeneral } from "../../context/ContextGeneral";
 import { CircleButton } from "../circleButton/circleButton";
 
-
 interface Props {
   onNewPhase: (value: boolean) => void;
   onSelect: (number: number) => void;
