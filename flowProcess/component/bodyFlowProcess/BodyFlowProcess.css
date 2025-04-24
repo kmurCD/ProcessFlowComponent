@@ -3,8 +3,10 @@
 /** Pasos */
 .steps {
   width: 100%;
-  max-height: 900px;
+  max-height: auto;
 }
+
+
 /** Contenedor general */
 .flow-container {
   width: 100%;
@@ -44,6 +46,7 @@
 }
 .text-content {
   display: flex;
+
   align-items: center;
 }
 /** Espaciador */
@@ -51,4 +54,10 @@
   display: flex;
   width: 100%;
   min-height: 50%;
+}
+
+@media (min-width: 375px) and (max-width: 719px) {
+  .steps {
+    padding-top: 30px;
+  }
 }
