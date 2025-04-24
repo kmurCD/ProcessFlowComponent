@@ -2,7 +2,7 @@ import * as React from "react";
 import "./BodyFlowProcess.css";
 
 import { ContextGeneral } from "../../context/ContextGeneral";
-import { CircleButton } from "../circleButton/CircleButton";
+import { CircleButton } from "../circleButton/circleButton";
 
 interface Props {
   onNewPhase: (value: boolean) => void;
@@ -25,7 +25,7 @@ const BodyFlowProcess: React.FC<Props> = ({ onNewPhase, onSelect }) => {
                 className="text-content"
                 style={{ height: isLast ? "100%" : "50%" }}
               >
-                <li>{name}</li>
+                <li style={{textAlign:"end"}}>{name}</li>
               </div>
               {/* Espaciador para alinear el texto */}
               {!isLast && <span className="span-space"> </span>}
