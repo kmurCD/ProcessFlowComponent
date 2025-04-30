@@ -7,7 +7,7 @@ interface ContextProps {
   names:string[];
   role:boolean;
   data:DataItem[];
-  validation:boolean;
+  validationContent:boolean;
 }
 
 // Crear el contexto con valores por defecto
@@ -17,5 +17,5 @@ export const ContextGeneral = createContext<ContextProps>({
   names: [],
   data: [],
   role: false,
-  validation: false,
+  validationContent: false,
 });

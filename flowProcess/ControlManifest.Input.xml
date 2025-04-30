@@ -1,129 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest>
-  <control namespace="Transligra" constructor="FlowProcess" version="0.0.4" display-name-key="flowProcess" description-key="flowProcess description" control-type="virtual">
-    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
-    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
-    Example1:
-      <external-service-usage enabled="true">
-        <domain>www.Microsoft.com</domain>
-      </external-service-usage>
-    Example2:
-      <external-service-usage enabled="false">
-      </external-service-usage>
-    -->
+  <control namespace="Transligra" constructor="FlowProcess" version="0.0.9" display-name-key="flowProcess" description-key="flowProcess description" control-type="virtual">
     <external-service-usage enabled="false">
-      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
-      <domain></domain>
-      <domain></domain>
-      -->
+      <!-- Dominios externos si son necesarios -->
     </external-service-usage>
-    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="phase" display-name-key="Phase" description-key="Phase of the oportunity" of-type="OptionSet" usage="bound" required="true" />
-    <property name="controlphase" display-name-key="ControlPhase" description-key="Control Phase of the opportunity" of-type="Whole.None" usage="bound" required="true" />
-    <property name="userSettings" display-name-key="User Settings" description-key="User settings for the current user" of-type="SingleLine.Text" usage="bound" required="false"/>
-
-  
-  
-  
+    
+    <!-- Propiedades principales -->
+    <property name="phase" display-name-key="Phase" of-type="OptionSet" usage="bound" required="true" />
+    <property name="controlphase" display-name-key="ControlPhase" of-type="Whole.None" usage="bound" required="true" />
+    <property name="userSettings" display-name-key="User Settings" of-type="SingleLine.Text" usage="bound" required="false"/>
 
     <!--1 Prospección-->
     <!--2 Calificacion de la oportunidad-->
-    <property name="description" display-name-key="Description" description-key="Descripcion de calificacion de la oportunidad" of-type="Multiple" usage="bound" required="true" />
-    <property name="parentcontactid" display-name-key="Contato" description-key="Contato" of-type="Lookup.Simple" usage="bound" required="false" />
-    <property name="proyectoComprometido" display-name-key="Proyecto comprometido" of-type="TwoOptions" usage="bound" required="false" />
+    <property name="parentcontactid" display-name-key="Contacto" of-type="Lookup.Simple" usage="bound" required="false" />
+    <property name="proyectoComprometido" display-name-key="¿Proyecto comprometido?" of-type="TwoOptions" usage="bound" required="false" />
     <property name="presupuestoDefinidoEstimado" display-name-key="Presupuesto Definido/Estimado" of-type="Currency" usage="bound" required="false" />
     <property name="procesoCompra" display-name-key="Proceso de compra" of-type="OptionSet" usage="bound" required="false" />
+    <property name="actividadescalificacion" display-name-key="Actividades Calificación Oportunidad" of-type="SingleLine.TextArea" usage="bound" required="false" />
 
-    <!--3 Levantamiento de requerimiento-->
+    <!-- Fase 3: Levantamiento Tecnico -->
     <property name="alcanceServiciosDefinido" display-name-key="Alcance servicios definido" of-type="TwoOptions" usage="bound" required="false" />
     <property name="cantidadDeUsuarios" display-name-key="Cantidad de usuarios" of-type="Whole.None" usage="bound" required="false" />
-
-    <!--4 Elaboración propuesta tecnica-->
-    <property name="parametrosDecision" display-name-key="Parámetros de decisión" of-type="SingleLine.TextArea" usage="bound" required="false" />
+    <property name="actividadeslevantamiento" display-name-key="Actividades Levantamiento" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="documentoArquitectura" display-name-key="Documento de Arquitectura" of-type="SingleLine.Text" usage="bound" required="false" />
+   
+    <!-- Fase 4: Elaboración de la Propuesta Técnica -->
     <property name="fechaEstimadaPresentacionPropuesta" display-name-key="Fecha estimada presentación propuesta" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="entendimientoPropuesta" display-name-key="Entendimiento de la propuesta" of-type="SingleLine.TextArea" usage="bound" required="false" />
-    <property name="estrategiaVenta" display-name-key="Estrategia de venta" of-type="SingleLine.TextArea" usage="bound" required="false" />
+    <property name="entendimientoPropuesta" display-name-key="Entendimiento de la Propuesta Técnica" of-type="OptionSet" usage="bound" required="false" />
+    <property name="documentoPropuestaTecnica" display-name-key="Documento Propuesta Técnica" of-type="SingleLine.Text" usage="bound" required="false" />
 
-    <!-- Entrega Propuesta Tecnica
-    <property name="documentoPresentacionEjecutiva" display-name-key="Documento de presentación ejecutiva" of-type="TwoOptions" usage="bound" required="false" />
-    <property name="liderProyecto" display-name-key="Líder proyecto" of-type="TwoOptions" usage="bound" required="false" />
-    <property name="usuarioLider" display-name-key="Usuario líder" of-type="TwoOptions" usage="bound" required="false" />
-    -->
-    <!--5 Presentación ejecutiva -->
+    <!-- Fase 5: Presentación de Propuesta Técnica -->
     <property name="fechaAprobacionPropuesta" display-name-key="Fecha aprobación propuesta técnica" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="favorabilidadActores" display-name-key="Favorabilidad actores" of-type="SingleLine.Text" usage="bound" required="false" />
-    <property name="evaluacionClientePropuesta" display-name-key="Evaluación cliente propuesta técnica" of-type="SingleLine.TextArea" usage="bound" required="false" />
-
-    <!--6 Aprobación propuesta tecnica -->
-    <property name="fechaobjetivopropuestaeconomica" display-name-key="Fecha objetivo de propuesta economica" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="estrategiaPrecios" display-name-key="Estrategia de precios" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="evaluacionClientePropuesta" display-name-key="Evaluación cliente propuesta técnica" of-type="OptionSet" usage="bound" required="false" />
+   
+    <!-- Fase 6: Elaboración de la Propuesta Económica -->
+    <property name="fechaobjetivopropuestaeconomica" display-name-key="Fecha objetivo propuesta económica" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
     <property name="precioObjetivo" display-name-key="Precio objetivo" of-type="Currency" usage="bound" required="false" />
+    <property name="estrategiaPrecios" display-name-key="Estrategia de precios" of-type="OptionSet" usage="bound" required="false" />
+   
+    <!-- Fase 7: Propuesta enviada al cliente -->
+    <property name="fechaEnvio" display-name-key="Fecha de envío" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="fechaSeguimiento" display-name-key="Fecha de seguimiento" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="montoRevenue" display-name-key="Monto Revenue" of-type="Currency" usage="bound" required="false" />
+    <property name="montoProfit" display-name-key="Monto Profit" of-type="Currency" usage="bound" required="false" />
 
-    <!-- Elaboración Propuesta Economica
-    <property name="aprobacionCondicionesEspeciales" display-name-key="Aprobación condiciones especiales" of-type="TwoOptions" usage="bound" required="false" />
-    <property name="preciosrevisadosyaprobados" display-name-key="Precios revisados y aprobados" of-type="TwoOptions" usage="bound" required="false" />
-    <property name="cotizacionProveedores" display-name-key="Cotización proveedores" of-type="TwoOptions" usage="bound" required="false" />
-    -->
-    <!--7 Entrega de propuesta economica-->
-    <property name="finaldecisiondate" display-name-key="Fecha de decisión final" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="brechas" display-name-key="Brechas" of-type="SingleLine.TextArea" usage="bound" required="false" />
-    <property name="variablesdenegociacion" display-name-key="Variables de negociación" of-type="SingleLine.TextArea" usage="bound" required="false" />
-
-    <!--8 Negociación-->
-    <property name="fechaDocumentoAdjudicacion" display-name-key="Fecha documento de adjudicación" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="fechaInicioProyecto" display-name-key="Fecha de inicio de proyecto" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="pasosaseguir" display-name-key="Pasos a seguir" of-type="SingleLine.TextArea" usage="bound" required="false" />
-    <property name="descripciondocumentodeadjudicacion" display-name-key="Descripción documento de adjudicación" of-type="SingleLine.TextArea" usage="bound" required="false" />
-
-    <!--9 Formalización-->
-    <property name="fechadeiniciodeejecucion" display-name-key="Fecha de inicio de ejecución" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
-    <property name="interlocutorApropiado" display-name-key="Interlocutor apropiado" of-type="Lookup.Simple" usage="bound" required="false" />
-
-    <!--10 Cierre Ganado-->
+    <!-- Fase 8: Negociación -->
+    <property name="fechaEstimadaCierre" display-name-key="Fecha estimada de cierre" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="fechaEstimadaFacturacion" display-name-key="Fecha estimada de facturación" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="brechasNegociacion" display-name-key="Brechas de negociación" of-type="OptionSet" usage="bound" required="false" />
+    <property name="variablesNegociacion" display-name-key="Variables de negociación" of-type="OptionSet" usage="bound" required="false" />
+   
+    <!-- Fase 9: Cierre Comercial -->
     <property name="tipodedocumento" display-name-key="Tipo de documento" of-type="OptionSet" usage="bound" required="false" />
-    <property name="fechaTransferencia" display-name-key="Fecha de transferencia de Preventa" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="fechaTransferencia" display-name-key="Fecha transferencia Preventa a Postventa" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
     <property name="fechaKickOff" display-name-key="Fecha de kick-off" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
     <property name="equipoTrabajoDefinido" display-name-key="Equipo de trabajo definido" of-type="TwoOptions" usage="bound" required="false" />
-
-    <!--11 Firma de contrato-->
-    <property name="evaluaciondesempenotransligra" display-name-key="Evaluación desempeño Transligra" of-type="Whole.None" usage="bound" required="false" />
-    <property name="evaluaciondesempenocliente" display-name-key="Evaluación desempeño cliente Transligra" of-type="Whole.None" usage="bound" required="false" />
-    <property name="actaFinalEntrega" display-name-key="Acta final de entrega" of-type="TwoOptions" usage="bound" required="false" /> 
-    <!--12 Entregado-->
    
-
-    
-<!--
-      Property node's of-type attribute can be of-type-group attribute.
-      Example:
-      <type-group name="numbers">
-        <type>Whole.None</type>
-        <type>Currency</type>
-        <type>FP</type>
-        <type>Decimal</type>
-      </type-group>
-      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-    -->
+    <!-- Fase 10: Formalización -->
+    <property name="fechadocumentoAdjudicacion" display-name-key="Fecha documento adjudicación" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="descripciondocumentodeadjudicacion" display-name-key="Descripción documento adjudicación" of-type="OptionSet" usage="bound" required="false" />
+    <property name="pasosaseguir" display-name-key="Pasos a seguir" of-type="OptionSet" usage="bound" required="false" />
+    <property name="fechaInicioProyecto" display-name-key="Fecha inicio proyecto" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+   
+    <!-- Fase 11: Firma de contrato -->
+    <property name="evaluacionDesempenoTransligra" display-name-key="Evaluación desempeño Transligra" of-type="Whole.None" usage="bound" required="false" />
+    <property name="evaluacionDesempenoCliente" display-name-key="Evaluación desempeño cliente" of-type="Whole.None" usage="bound" required="false" />
+    <property name="fechaInicioEjecucion" display-name-key="Fecha inicio ejecución" of-type="DateAndTime.DateOnly" usage="bound" required="false" />
+    <property name="interlocutorApropiado" display-name-key="Interlocutor apropiado" of-type="Lookup.Simple" usage="bound" required="false" />
+    <property name="actaFinalEntrega" display-name-key="Acta final de entrega" of-type="TwoOptions" usage="bound" required="false" />
+   
     <resources>
       <code path="index.ts" order="1" />
       <platform-library name="React" version="16.14.0" />
       <platform-library name="Fluent" version="9.46.2" />
-      <!-- UNCOMMENT TO ADD MORE RESOURCES
-      <css path="css/flowProcess.css" order="1" />
-      <resx path="strings/flowProcess.1033.resx" version="1.0.0" />
-      -->
     </resources>
-    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    
+    <!-- Características necesarias habilitadas -->
     <feature-usage>
-      <uses-feature name="Device.captureAudio" required="true" />
-      <uses-feature name="Device.captureImage" required="true" />
-      <uses-feature name="Device.captureVideo" required="true" />
-      <uses-feature name="Device.getBarcodeValue" required="true" />
-      <uses-feature name="Device.getCurrentPosition" required="true" />
       <uses-feature name="Device.pickFile" required="true" />
       <uses-feature name="Utility" required="true" />
       <uses-feature name="WebAPI" required="true" />
     </feature-usage>
-    -->
   </control>
 </manifest>

@@ -1,50 +1,42 @@
 import * as React from "react";
-import "./BodyFlowProcess.css";
-
+import { makeStyles } from "@fluentui/react-components";
 import { ContextGeneral } from "../../context/ContextGeneral";
-import { CircleButton } from "../circleButton/circleButton";
+import { PhaseItem } from "./PhaseIteem";
+
 
 interface Props {
   onNewPhase: (value: boolean) => void;
   onSelect: (number: number) => void;
 }
 
+const useStyles = makeStyles({
+  steps: {
+    display: "flex",
+    flexDirection: "column",
+    width: "100%",
+    gap: "8px",
+  },
+});
+
 const BodyFlowProcess: React.FC<Props> = ({ onNewPhase, onSelect }) => {
   const { names, phase } = React.useContext(ContextGeneral);
+  const styles = useStyles();
 
   return (
-    <div className="steps">
+    <div className={styles.steps}>
       {names.map((name, i) => {
         const number = i + 1;
-        const isLast = i === names.length - 1;
+        const isLast = i === names.length - 1;     
         return (
-          <div key={number} className="flow-container">
-            {/* Logica para la implementación del texto "Estados de fase" */}
-            <div className="text-container">
-              <div
-                className="text-content"
-                style={{ height: isLast ? "100%" : "50%" }}
-              >
-                <li style={{textAlign:"end"}}>{name}</li>
-              </div>
-              {/* Espaciador para alinear el texto */}
-              {!isLast && <span className="span-space"> </span>}
-            </div>
-            {/* Logica para la implementación del Boton circular */}
-            <div className="circle-progress-container">
-              <CircleButton
-                number={number}
-                onSelect={() => onSelect(number)}
-                onNewPhase={onNewPhase}
-              ></CircleButton>
-              {!isLast && (
-                <div
-                  className={`${phase <= number ? "progress-after" : ""} 
-                    ${phase > number ? "progress-before" : ""}`}
-                ></div>
-              )}
-            </div>
-          </div>
+          <PhaseItem
+            key={number}
+            name={name}
+            number={number}
+            phase={phase}
+            isLast={isLast}
+            onSelect={onSelect}
+            onNewPhase={onNewPhase}
+          />
         );
       })}
     </div>

@@ -1,37 +1,111 @@
 import * as React from "react";
-import ErrorCircleFlow from "../formValidation/assets/error_flow.svg";
-import ChekOk from "../formValidation/assets/chekOk.svg";
-import "../formValidation/FormValidation.css";
+import {
+  makeStyles,
+  tokens,
+  Text
+} from "@fluentui/react-components";
+import {
+  ErrorCircleRegular,
+  CheckmarkCircleFilled
+} from "@fluentui/react-icons";
 import { DataItem } from "../../data/DataType";
 import { ContextGeneral } from "../../context/ContextGeneral";
 
+// Definición de estilos usando makeStyles de Fluent UI v9
+const useStyles = makeStyles({
+  formPhaseContainer: {
+    padding: "16px",
+    fontFamily: tokens.fontFamilyBase,
+  },
+  formPhase: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px", // Espacio entre elementos
+  },
+  formPhaseItem: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "8px 0",
+    borderBottom: `1px solid ${tokens.colorNeutralStroke2}`,
+  },
+  labelFormValidation: {
+    flex: 1,
+    fontSize: tokens.fontSizeBase300,
+    color: tokens.colorNeutralForeground1,
+    paddingRight: "16px",
+  },
+  circleError: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  circleIcon: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "32px",
+    width: "32px",
+    borderRadius: "50%",
+  },
+
+  iconStyle: {
+    fontSize: "40px",
+  }
+});
+const iconStyle = {
+  fontSize: "25px",
+};
+
 const FormValidation: React.FunctionComponent = () => {
   const { data } = React.useContext(ContextGeneral);
-console.log("Data item form: ", data);
-  return (
-    <div className="form-phase-container">
-      <div className="form-phase">
-        {data.map((item: DataItem, i: number) => {
-          return (
-            <div key={i} className="form-phase-item">
-              <div className="label-form-validation">{item.descripcion}</div>
+  const styles = useStyles();
+  type ContentType = string | number | boolean | Date | null | undefined;
 
-              <div className="circle-error">
-                {["", false, null, undefined].includes(
-                  item.contenido &&
-                    typeof item.contenido === "object" &&
-                    item.contenido instanceof Date
-                    ? item.contenido.toString()
-                    : typeof item.contenido === "number"
-                    ? item.contenido.toString()
-                    : item.contenido
-                ) ? (
-                  <span className="circle-icon">
-                    <ErrorCircleFlow />
+
+  // Función para evaluar si el contenido está vacío o es falso
+  const isEmpty = (content: ContentType): boolean => {
+    if (content === undefined || content === null || content === false) {
+      return true;
+    }
+
+    if (typeof content === "string" && content.trim() === "") {
+      return true;
+    }
+
+    if (content instanceof Date) {
+      return false; // Una fecha siempre tiene un valor
+    }
+
+    if (typeof content === "number") {
+      return isNaN(content); // Solo es vacío si es NaN
+    }
+
+    return false;
+  };
+
+  return (
+    <div className={styles.formPhaseContainer}>
+      <div className={styles.formPhase}>
+        {data.map((item: DataItem, i: number) => {
+          // Verificar si el contenido está vacío
+          const contentIsEmpty = isEmpty(item.contenido);
+
+          return (
+            <div key={i} className={styles.formPhaseItem}>
+              <Text className={styles.labelFormValidation}>
+                {item.descripcion}
+              </Text>
+
+              <div className={styles.circleError}>
+                {contentIsEmpty ? (
+                  <span className={styles.circleIcon}>
+                    <ErrorCircleRegular style={iconStyle} primaryFill="red" />
                   </span>
                 ) : (
-                  <span className="circle-icon">
-                    <ChekOk />
+                  <span className={styles.circleIcon}>
+                    <CheckmarkCircleFilled style={iconStyle} primaryFill="#54b054" />
                   </span>
                 )}
               </div>
@@ -42,4 +116,5 @@ console.log("Data item form: ", data);
     </div>
   );
 };
+
 export default FormValidation;

@@ -19,166 +19,83 @@ export const namePhases = [
 
 export const data: Record<number, DataItem[]> = {
   1: [],
+
+  // Fase 2: Calificación de Oportunidad
   2: [
-    { id: "description", descripcion: "Description", contenido: "" },
-    { id: "parentcontactid", descripcion: "Contato", contenido: null },
-    {
-      id: "proyectoComprometido",
-      descripcion: "Proyecto comprometido",
-      contenido: false,
-    },
-    {
-      id: "presupuestoDefinidoEstimado",
-      descripcion: "Presupuesto Definido/Estimado",
-      contenido: 0,
-    },
+    { id: "parentcontactid", descripcion: "Contacto", contenido: null },
+    { id: "proyectoComprometido", descripcion: "¿Proyecto comprometido?", contenido: false },
+    { id: "presupuestoDefinidoEstimado", descripcion: "Presupuesto Definido/Estimado", contenido: 0 },
     { id: "procesoCompra", descripcion: "Proceso de compra", contenido: null },
+    { id: "actividadescalificacion", descripcion: "Actividades", contenido: "" },
   ],
+
+  // Fase 3: Levantamiento Tecnico
   3: [
-    {
-      id: "alcanceServiciosDefinido",
-      descripcion: "Alcance servicios definido",
-      contenido: false,
-    },
-    {
-      id: "cantidadDeUsuarios",
-      descripcion: "Cantidad de usuarios",
-      contenido: 0,
-    },
+    { id: "alcanceServiciosDefinido", descripcion: "Alcance servicios definido", contenido: false },
+    { id: "cantidadDeUsuarios", descripcion: "Cantidad de usuarios", contenido: 0 },
+    { id: "actividadeslevantamiento", descripcion: "Actividades", contenido: "" },
+    { id: "documentoArquitectura", descripcion: "Documento de Arquitectura", contenido: "" },
   ],
+
+  // Fase 4: Elaboración de la Propuesta Técnica
   4: [
-    {
-      id: "parametrosDecision",
-      descripcion: "Parámetros de decisión",
-      contenido: "",
-    },
-    {
-      id: "fechaEstimadaPresentacionPropuesta",
-      descripcion: "Fecha estimada presentación propuesta",
-      contenido: null,
-    },
-    {
-      id: "entendimientoPropuesta",
-      descripcion: "Entendimiento de la propuesta",
-      contenido: "",
-    },
-    {
-      id: "estrategiaVenta",
-      descripcion: "Estrategia de venta",
-      contenido: "",
-    },
-  ] /*
-        5: [
-          { id: "documentoPresentacionEjecutiva", descripcion: "Documento de presentación ejecutiva", contenido: false },
-          { id: "liderProyecto", descripcion: "Líder proyecto", contenido: false },
-          { id: "usuarioLider", descripcion: "Usuario líder", contenido: false }
-        ],*/,
+    { id: "fechaEstimadaPresentacionPropuesta", descripcion: "Fecha estimada de presentación de la propuesta técnica", contenido: null },
+    { id: "entendimientoPropuesta", descripcion: "Entendimiento de la Propuesta Técnica", contenido: null },
+    { id: "documentoPropuestaTecnica", descripcion: "Documento Propuesta Técnica", contenido: "" },
+
+  ],
+
+  // Fase 5: Presentación de Propuesta Técnica
   5: [
-    {
-      id: "fechaAprobacionPropuesta",
-      descripcion: "Fecha aprobación propuesta técnica",
-      contenido: null,
-    },
-    {
-      id: "favorabilidadActores",
-      descripcion: "Favorabilidad actores",
-      contenido: "",
-    },
-    {
-      id: "evaluacionClientePropuesta",
-      descripcion: "Evaluación cliente propuesta técnica",
-      contenido: "",
-    },
+    { id: "fechaAprobacionPropuesta", descripcion: "Fecha de aprobación de la propuesta técnica", contenido: null },
+    { id: "evaluacionClientePropuesta", descripcion: "Evaluación cliente propuesta técnica", contenido: null },
   ],
+
+  // Fase 6: Elaboración de la Propuesta Económica
   6: [
-    {
-      id: "fechaobjetivopropuestaeconomica",
-      descripcion: "Fecha objetivo de propuesta económica",
-      contenido: null,
-    },
-    {
-      id: "estrategiaPrecios",
-      descripcion: "Estrategia de precios",
-      contenido: "",
-    },
+    { id: "fechaobjetivopropuestaeconomica", descripcion: "Fecha objetivo de la propuesta económica", contenido: null },
     { id: "precioObjetivo", descripcion: "Precio objetivo", contenido: 0 },
-  ] /*
-        8: [
-          { id: "aprobacionCondicionesEspeciales", descripcion: "Aprobación condiciones especiales", contenido: false },
-          { id: "preciosrevisadosyaprobados", descripcion: "Precios revisados y aprobados", contenido: false },
-          { id: "cotizacionProveedores", descripcion: "Cotización proveedores", contenido: false }
-        ],*/,
+    { id: "estrategiaPrecios", descripcion: "Estrategia de precios", contenido: null },
+  ],
+
+  // Fase 7: Propuesta enviada al cliente
   7: [
-    {
-      id: "finaldecisiondate",
-      descripcion: "Fecha de decisión final",
-      contenido: null,
-    },
-    { id: "brechas", descripcion: "Brechas", contenido: "" },
-    {
-      id: "variablesdenegociacion",
-      descripcion: "Variables de negociación",
-      contenido: "",
-    },
+    { id: "fechaEnvio", descripcion: "Fecha de envío", contenido: null },
+    { id: "fechaSeguimiento", descripcion: "Fecha de seguimiento", contenido: null },
+    { id: "montoRevenue", descripcion: "Monto Revenue", contenido: 0 },
+    { id: "montoProfit", descripcion: "Monto Profit", contenido: 0 },
   ],
-  8:  [
-    {
-      id: "tipodedocumento",
-      descripcion: "Tipo de documento",
-      contenido: null,
-    },
-    {
-      id: "fechaTransferencia",
-      descripcion: "Fecha de transferencia de Preventa",
-      contenido: null,
-    },
-    { id: "fechaKickOff", descripcion: "Fecha de kick-off", contenido: null },
-    {
-      id: "equipoTrabajoDefinido",
-      descripcion: "Equipo de trabajo definido",
-      contenido: false,
-    },
-  ]
-  ,
+
+  // Fase 8: Negociación
+  8: [
+    { id: "fechaEstimadaCierre", descripcion: "Fecha estimada de cierre", contenido: null },
+    { id: "fechaEstimadaFacturacion", descripcion: "Fecha estimada de facturación", contenido: null },
+    { id: "brechasNegociacion", descripcion: "Brechas de negociación", contenido: null},
+    { id: "variablesNegociacion", descripcion: "Variables de negociación", contenido: null},
+  ],
+
+  // Fase 9: Cierre Comercial
   9: [
-    {
-      id: "fechaDocumentoAdjudicacion",
-      descripcion: "Fecha documento de adjudicación",
-      contenido: null,
-    },
-    {
-      id: "fechaInicioProyecto",
-      descripcion: "Fecha de inicio de proyecto",
-      contenido: null,
-    },
-    { id: "pasosaseguir", descripcion: "Pasos a seguir", contenido: "" },
-    {
-      id: "descripciondocumentodeadjudicacion",
-      descripcion: "Descripción documento de adjudicación",
-      contenido: "",
-    },
+    { id: "tipodedocumento", descripcion: "Tipo de documento", contenido: null },
+    { id: "fechaTransferencia", descripcion: "Fecha de transferencia de Preventa a Postventa", contenido: null },
+    { id: "fechaKickOff", descripcion: "Fecha de kick-off", contenido: null },
+    { id: "equipoTrabajoDefinido", descripcion: "Equipo de trabajo definido", contenido: null },
   ],
+
+  // Fase 10: Formalización
   10: [
-    {
-      id: "fechadeiniciodeejecucion",
-      descripcion: "Fecha de inicio de ejecución",
-      contenido: null,
-    },
-    {
-      id: "interlocutorApropiado",
-      descripcion: "Interlocutor apropiado",
-      contenido: null,
-    },
-    {
-      id: "actaFinalEntrega",
-      descripcion: "Acta final de entrega",
-      contenido: false,
-    },
+    { id: "fechadocumentoAdjudicacion", descripcion: "Fecha del documento de adjudicación", contenido: null },
+    { id: "descripciondocumentodeadjudicacion", descripcion: "Descripción documento de adjudicación", contenido: null },
+    { id: "pasosaseguir", descripcion: "Pasos a seguir", contenido: null },
+    { id: "fechaInicioProyecto", descripcion: "Fecha de inicio de proyecto", contenido: null },
   ],
+
+  // Fase 11: Firma de contrato
   11: [
-    /*
-    { id: "evaluaciondesempenotransligra", descripcion: "Evaluación desempeño Transligra", contenido: 0 },
-    { id: "evaluaciondesempenocliente", descripcion: "Evaluación desempeño cliente Transligra", contenido: 0 },*/
-  ] /*
-        12: []*/,
+    { id: "evaluacionDesempenoTransligra", descripcion: "Evaluación desempeño Transligra", contenido: 0 },
+    { id: "evaluacionDesempenoCliente", descripcion: "Evaluación desempeño cliente", contenido: 0 },
+    { id: "fechaInicioEjecucion", descripcion: "Fecha de inicio de ejecución", contenido: null },
+    { id: "interlocutorApropiado", descripcion: "Interlocutor apropiado", contenido: null },
+    { id: "actaFinalEntrega", descripcion: "Acta final de entrega", contenido: false },
+  ],
 };

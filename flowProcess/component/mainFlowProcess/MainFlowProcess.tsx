@@ -1,11 +1,14 @@
 import * as React from "react";
-import { useState } from "react";
-import "../mainFlowProcess/MainFlowProcess.css";
+import { useState, useMemo, useCallback } from "react";
+import { makeStyles } from "@fluentui/react-components";
 
 import { namePhases } from "../../data/DataOportunity";
 import BodyFlowProcess from "../bodyFlowProcess/BodyFlowProcess";
 import { DataItem } from "../../data/DataType";
 import { ContextGeneral } from "../../context/ContextGeneral";
+
+import useValidation from "./useValidation"; // Hook personalizado para validación
+import StatusDisplay from "./StatusDisplay";
 
 interface Props {
   phase: number;
@@ -16,84 +19,71 @@ interface Props {
   };
   onNewPhase: (value: boolean) => void;
 }
-const MainFlowProcess: React.FC<Props> = (Props) => {
+
+const useStyles = makeStyles({
+  containerMain: {
+    display: "flex",
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
+    padding: "16px",
+    gap: "16px",
+  },
+  containerFlow: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "8px",
+  },
+  containerSection: {
+    marginTop: "16px",
+  },
+});
+
+const MainFlowProcess: React.FC<Props> = ({ phase, role, onPhaseSelect, onNewPhase }) => {
+  const styles = useStyles();
+
+  // Estados
   const [onSelectPhase, setSelectPhase] = useState<number>(0);
-  const [onValitation, setValitation] = useState<boolean>(false);
+  const [onValidationContent, setValidation] = useState<boolean>(false);
   const [data, setData] = useState<DataItem[]>([]);
 
-  /**====Nombres de eportunidad */
-  const names = namePhases;
+  // Hook personalizado para validación
+  const validateData = useValidation();
 
-  // Memoizar la validación de datos
-  const validateData = React.useCallback((dataItems: DataItem[]) => {
-    return dataItems.every((item) => {
-      const content = item.contenido;
-      return (
-        content !== null &&
-        content !== undefined &&
-        content !== "" &&
-        content !== false
-      );
-    });
-  }, []);
-
-  // Usar la validación memoizada
-  const onSelect = React.useCallback(
+  // Manejo de selección de fase
+  const onSelect = useCallback(
     (number: number) => {
       setSelectPhase(number);
-      const { dataItems, isValid } = Props.onPhaseSelect(number);
+      const { dataItems, isValid } = onPhaseSelect(number);
       setData(dataItems);
-      setValitation(isValid && validateData(dataItems));
+      setValidation(isValid && validateData(dataItems));
     },
-    [Props.onPhaseSelect, validateData]
+    [onPhaseSelect, validateData]
   );
 
-  /* Crear un objeto de estilos memoizado*/
-  const styles = React.useMemo(
-    () => ({
-      statusText: {
-        fontWeight: "bold",
-        color: "black",
-        fontSize: "15",
-      },
-      statusValue: {
-        color: "red",
-        fontSize: "15",
-        textAlign: "center" as const,
-      },
-    }),
-    []
-  );
-
-  // Memoizar el componente de estado
-  const StatusDisplay = React.memo(({ phase }: { phase: number }) => (
-    <div className="status">
-      <span style={styles.statusText}>Fase actual:</span>
-      <span style={styles.statusValue}>{namePhases[phase - 1]}</span>
-    </div>
-  ));
-  StatusDisplay.displayName = "StatusDisplay";
+  // Memoizar nombres de fases
+  const names = useMemo(() => namePhases, []);
 
   return (
-    <div className="container-mainFlowProcess">
-      <div className="container-flowProcess">
-        <StatusDisplay phase={Props.phase} />
+    <div className={styles.containerMain}>
+      <div className={styles.containerFlow}>
+        {/* Subcomponente para mostrar el estado */}
+        <StatusDisplay phase={phase} names={names} />
 
-        <div className="container-section">
+        <div className={styles.containerSection}>
+          {/* Proveedor de contexto */}
           <ContextGeneral.Provider
             value={{
               data,
-              validation: onValitation,
-              role: Props.role,
+              validationContent: onValidationContent,
+              role,
               contextSelectPhase: onSelectPhase,
-              phase: Props.phase,
-              names: names,
+              phase,
+              names,
             }}
           >
-            <BodyFlowProcess
-              onNewPhase={Props.onNewPhase}
-              onSelect={onSelect}
-            />
+            {/* Componente principal del flujo */}
+            <BodyFlowProcess onNewPhase={onNewPhase} onSelect={onSelect} />
           </ContextGeneral.Provider>
         </div>
       </div>

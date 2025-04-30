@@ -1,161 +1,133 @@
 import * as React from "react";
+import { useState, memo, useContext, useMemo } from "react";
 import {
-  FocusZone,
-  FocusZoneTabbableElements,
-  DirectionalHint,
-  ThemeProvider,
-  FluentTheme,
-  Callout,
-} from "@fluentui/react";
-import { useBoolean, useId } from "@fluentui/react-hooks";
-import CheckCircleFlow from "../circleButton/assets/check_circle_flow.svg";
-import RadioCircleFlow from "../circleButton/assets/radio_button.svg";
-import Back from "../circleButton/assets/back.svg";
-import {
-  DefaultButton,
-  IconButton,
-  PrimaryButton,
-} from "@fluentui/react/lib/Button";
-import "../circleButton/circleButton.css";
-import { useState } from "react";
+  Button,
+  FluentProvider,
+  Popover,
+  PopoverTrigger,
+  Tooltip,
+  useId,
+} from "@fluentui/react-components";
 
 import { ContextGeneral } from "../../context/ContextGeneral";
-import FormValidation from "../formValidation/formValidation";
-import { DialogConfirmation } from "../dialogConfirmation/dialogConfirmation";
-
-
-
-
-
+import { CircleButtonIcon } from "./CircleButtonIcon";
+import { PhasePopover } from "./PhasePopover";
+import { lightTheme } from "../../theme/theme"; // Importa el tema
 
 interface PropsCircleButton {
   number: number;
   onNewPhase: (value: boolean) => void;
   onSelect: (value: number) => void;
 }
+
 export const CircleButton: React.FC<PropsCircleButton> = ({
   number,
   onSelect,
   onNewPhase,
 }) => {
-  const { contextSelectPhase, phase, names, role, validation } =
-    React.useContext(ContextGeneral);
-  const [isCalloutVisible, { toggle: toggleIsCalloutVisible }] =
-    useBoolean(false);
-  const buttonId = useId("callout-button");
-  const [isDialogVisible, setIsDialogVisible] = useState(false);
+  // Obtener todo el contexto
+  const context = useContext(ContextGeneral);
 
-  const openDialog = () => setIsDialogVisible(true);
-  const closeDialog = () => setIsDialogVisible(false);
+  // Extraer y memoizar los valores que necesitas
+  const phase = useMemo(() => context.phase, [context.phase]);
+  const contextSelectPhase = useMemo(
+    () => context.contextSelectPhase,
+    [context.contextSelectPhase]
+  );
+  const names = useMemo(() => context.names, [context.names]);
+  const role = useMemo(() => context.role, [context.role]);
+  const validationContent = useMemo(() => context.validationContent, [context.validationContent]);
+
+  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+
+  const buttonId = useId("circle-button");
+
+  const togglePopover = () => setIsPopoverOpen(!isPopoverOpen);
+
+  const getButtonStyles = () => {
+    const baseStyle = {
+      width: "40px", // Ancho explícito de 40px
+      height: "40px", // Alto explícito de 40px
+      minWidth: "40px", // Ancho mínimo para evitar expansión
+      maxWidth: "40px", // Ancho máximo para limitar el botón
+      padding: 0, // Sin relleno interior
+      margin: 0, // Sin margen exterior
+      borderRadius: "50%", // Forma circular
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      overflow: "hidden",
+    };
+
+    if (phase === number) {
+      return {
+        ...baseStyle,
+        color: "white",
+        fontWeight: "bold",
+      };
+    } else if (contextSelectPhase === number) {
+      return {
+        ...baseStyle,
+        backgroundColor: "#707070", // Gris
+        color: "white",
+        border: "solid 5px #d1d1d1",
+      };
+    } else if (number > phase) {
+      return {
+        ...baseStyle,
+        backgroundColor: "white",
+        color: "#505050",
+        border: "1px solid #d1d1d1",
+      };
+    } else {
+      return {
+        ...baseStyle,
+        color: "white",
+      };
+    }
+  };
+
   return (
-    <ThemeProvider theme={FluentTheme}>
-      <>
-        <DefaultButton
-          className={`circle-container 
-          ${contextSelectPhase === number ? "circle-select" : ""}
-          ${phase === number ? "circle-container circle-active" : "inactive"}
-          ${phase < number ? "circle-container-1" : ""}
-          ${phase > number ? "circle-container-2" : ""}
-        `}
-          id={buttonId}
-          onClick={() => {
-            toggleIsCalloutVisible();
-            onSelect(number);
-          }}
-        >
-          {/*Iconos contenido del boton*/}
-          <span className="circle-content">
-            {phase < number ? (
-              <>{number}</>
-            ) : phase > number ? (
-              <span className="circle-icon">
-                <CheckCircleFlow />
-              </span>
-            ) : (
-              <span className="circle-icon">
-                <RadioCircleFlow />
-              </span>
-            )}
-          </span>
-        </DefaultButton>
-
-        {/*Mostrar panel*/}
-        {isCalloutVisible ? (
-          <Callout
-            role="alertdialog"
-            className="callout-container"
-            gapSpace={0}
-            target={`#${buttonId}`}
-            onDismiss={toggleIsCalloutVisible}
-            setInitialFocus
-            hideOverflow={true}
-            directionalHint={DirectionalHint.bottomRightEdge}
-            preventDismissOnScroll={true}
+    <FluentProvider theme={lightTheme}>
+      <Popover
+        withArrow
+        size="small"
+        positioning={"before-bottom"}
+        open={isPopoverOpen}
+        onOpenChange={(e, data) => setIsPopoverOpen(data.open)}
+      >
+        <PopoverTrigger>
+          <Tooltip
+            content={`Fase ${number}`}
+            relationship="label"
+            withArrow
+            positioning={"after"}
           >
-            <div className="icon-container">
-              <div className="title-name">
-                <h4>{names[contextSelectPhase - 1]}</h4>
-              </div>
-              <div className="icon-close">
-                <IconButton
-                  iconProps={{ iconName: "Cancel" }}
-                  ariaLabel="Cerrar"
-                  onClick={toggleIsCalloutVisible}
-                  className="iconButton"
-                />
-              </div>
-            </div>
-            <div className="form-val-container">
-              <FormValidation />
-            </div>
-
-            <DialogConfirmation
-              isVisible={isDialogVisible}
-              onClose={closeDialog}
-              onConfirm={onNewPhase}
-              onCloseCallet={toggleIsCalloutVisible}
-            />
-            <FocusZone
-              handleTabKey={FocusZoneTabbableElements.all}
-              isCircularNavigation
+            {/* Tooltip para mostrar el número de fase */}
+            <Button
+              id={buttonId}
+              style={getButtonStyles()} // Usar style en lugar de className
+              onClick={() => {
+                togglePopover();
+                onSelect(number);
+              }}
             >
-              <div className="container-button">
-                <div className="space"></div>
-                <div className="button-next-back">
-                  {isCalloutVisible && phase == contextSelectPhase && (
-                    <PrimaryButton
-                      className={`${
-                        !validation
-                          ? "form-button-next-disabled"
-                          : "form-button-next"
-                      }`}
-                      onClick={openDialog}
-                      disabled={!validation}
-                    >
-                      Siguiente
-                    </PrimaryButton>
-                  )}
-                  {isCalloutVisible &&
-                    phase == contextSelectPhase &&
-                    role == true && (
-                      <DefaultButton
-                        className={"form-button-cancel"}
-                        onClick={() => {
-                          onNewPhase(false);
-                          toggleIsCalloutVisible();
-                        }}
-                      >
-                        <>
-                          <Back /> Fase
-                        </>
-                      </DefaultButton>
-                    )}
-                </div>
-              </div>
-            </FocusZone>
-          </Callout>
-        ) : null}
-      </>
-    </ThemeProvider>
+              <CircleButtonIcon phase={phase} number={number} />
+            </Button>
+          </Tooltip>
+        </PopoverTrigger>
+
+        <PhasePopover
+          isOpen={isPopoverOpen}
+          onClose={() => setIsPopoverOpen(false)}
+          phaseName={names[contextSelectPhase - 1]}
+          currentPhase={phase}
+          selectedPhase={contextSelectPhase}
+          hasAdminRole={!!role}
+          validationContent={validationContent}
+          onNewPhase={onNewPhase}
+        />
+      </Popover>
+    </FluentProvider>
   );
 };
